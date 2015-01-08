@@ -3,7 +3,7 @@
         <div class="col-lg-9">
             <div class="text-center">
               <% if (tip.vine){ %>
-                <iframe class="vine-embed" src="https://vine.co/v/<%= tip.vine %>/embed/simple" width="320" height="320" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+                <iframe class="vine-embed" src="//vine.co/v/<%= tip.vine %>/embed/simple" width="320" height="320" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
               <% } else if (tip.image){ %>
                 <img src="<%= tip.image %>">
               <% } %>
