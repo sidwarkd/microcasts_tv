@@ -1,0 +1,9 @@
+<% if (page.path === "tips/index.html"){  %>
+  <%- partial('_partial/tips-index', {post: page}) %>
+<% } %>
+<% if (page.path === "episodes/index.html"){  %>
+  <%- partial('_partial/episode-index', {post: page}) %>
+<% } %>
+<% if (page.path === "reviews/index.html"){  %>
+  <%- partial('_partial/review-index', {post: page}) %>
+<% } %>

@@ -1,0 +1,21 @@
+<section class="text-center">
+  <h3>Share It</h3>
+  Could this help somebody else? Share it with them.
+  <ul class="list-inline">
+      <li>
+          <a href="http://twitter.com/share?text=<%= post.title %>%0A&url=http://microcasts.tv<%- url_for(post.path) %>" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+
+      </li>
+      <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://microcasts.tv<%- url_for(post.path) %>" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+      </li>
+      <li>
+          <a href="https://plus.google.com/share?url=http://microcasts.tv<%- url_for(post.path) %>" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+      </li>
+      <% if(post.image){ %>
+      <li>
+          <a href="https://pinterest.com/pin/create/button/?url=http://microcasts.tv<%- url_for(post.path) %>&media=http://microcasts.tv<%- url_for(post.image) %>&description=" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-pinterest"></i></a>
+      </li>
+      <% } %>
+  </ul>
+</section>

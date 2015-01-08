@@ -1,0 +1,12 @@
+<% if (page.type === "review"){  %>
+  <%- partial('_partial/review', {review: page}) %>
+<% } %>
+<% if (page.type === "tip"){  %>
+  <%- partial('_partial/tip.ejs', {tip: page}) %>
+<% } %>
+<% if (page.type === "episode"){  %>
+  <%- partial('_partial/episode', {episode: page}) %>
+<% } %>
+<% if (page.type === "blog"){  %>
+  <%- partial('_partial/blog-post', {post: page, index: false}) %>
+<% } %>

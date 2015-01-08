@@ -1,0 +1,11 @@
+<% if (supplies && supplies.length > 0){ %>
+<section class="supplies">
+  <h3>What You'll Need</h3>
+  <div class="part-list">
+    <ul>
+      <% supplies.forEach(function(supply){ %>
+        <li><span><%= supply.name %></span><span class="pull-right"><%= supply.quantity %></span></li>
+      <% }) %>
+    </ul></div>
+</section>  
+<% } %>

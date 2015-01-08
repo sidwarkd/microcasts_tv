@@ -1,0 +1,50 @@
+<div class="container" style="padding-top:120px">
+
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 postContent article-entry">
+            <% get_posts({count: 20, query: {type:"blog"}}).each(function(post){ %>
+              <%- partial('post/preview', {post: post}) %>
+            <% }) %>
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Blog Search Well -->
+            <div class="well">
+                <h4>Blog Search</h4>
+                <form class="search" action="http://google.com/search" method="GET">
+                    <input type="hidden" name="as_sitesearch" value="microcasts.tv">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                    </div>
+                </form>
+                <!-- /.input-group -->
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">Recent Posts</h4>
+              </div>
+                <ul class="list-group">
+                    <% get_posts({count: 5, query: {type:"blog"}}).each(function(post){ %>
+                        <li class="list-group-item"><a href="<%- url_for(post.path) %>"><%= post.title %></a></li>
+                    <% }) %>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->

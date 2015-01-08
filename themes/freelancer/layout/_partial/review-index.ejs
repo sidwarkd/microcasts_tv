@@ -1,0 +1,16 @@
+
+<section id="reviews" class="episodes" style="margin-top:20px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Reviews</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <% get_posts({count: 100, query: {type:"review"}}).each(function(review){ %>
+        <%- partial('review/preview', {post: review}) %>
+      <% }) %>
+    </div>
+  </div>
+</section>
