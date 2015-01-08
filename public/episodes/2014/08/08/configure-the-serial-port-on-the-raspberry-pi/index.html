@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <title>µCasts  | Configure the Serial Port on the Raspberry Pi</title>
+
+  
+    <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+  <!-- Custom Fonts -->
+  <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+  <body id="page-top" class="index">
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-fixed-top" >
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/img/uCasts.png" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="/episodes">Episodes</a>
+        </li>
+        <li class="page-scroll">
+          <a href="/reviews">Reviews</a>
+        </li>
+        <li class="page-scroll">
+          <a href="/tips">Tips</a>
+        </li>
+        <li class="page-scroll">
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+    
+
+
+  <div class="container episode-abstract article-entry">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="video-container text-center">
+                <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/bKHLTn_nXUM?rel=0" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <hr/>
+            <h1>#18 - Configure the Serial Port on the Raspberry Pi</h1>
+            <div class="tag-bar">
+              
+                <span class="label label-info">RaspberryPi</span>
+              
+                <span class="label label-info">Serial</span>
+              
+            </div>
+            <hr/>
+            <p>Did you even know the Raspberry Pi had a serial port? If you did and have tried to use it in Raspbian you’ve probably run in to some weird behavior. That’s because, by default, the serial port is tied up by the operating system so it can’t be reliably used in your projects. In this episode I show you how to configure the serial port so it can be used to make your awesome ideas reality.</p>
+<h2 id="TL;DR">TL;DR</h2>
+<p>All you have to do is modify two files to reclaim the serial port from Raspbian. The rest of this post shows you how.</p>
+<h3 id="/etc/inittab">/etc/inittab</h3>
+<p>Comment out the line near the very bottom that spawns a getty using the serial port.</p>
+<figure class="highlight bash"><pre><span class="line"><span class="comment">#Spawn a getty on Raspberry Pi serial line</span></span>
+<span class="line"><span class="comment">#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100  &lt;---- comment this line</span></span>
+</pre></figure>
+
+<h3 id="/boot/cmdline-txt">/boot/cmdline.txt</h3>
+<p>Be careful with this one as it contains the parameters sent to the kernel at startup. You need to remove any references to ttyAMA0,115200.</p>
+<p>So you would change this:</p>
+<figure class="highlight bash"><pre><span class="line">dwc_otg.lpm_enable=<span class="number">0</span> console=ttyAMA0,<span class="number">115200</span> kgdboc=ttyAMA0,<span class="number">115200</span> console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait</span>
+</pre></figure>
+
+<p>To this:</p>
+<figure class="highlight bash"><pre><span class="line">dwc_otg.lpm_enable=<span class="number">0</span> console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait</span>
+</pre></figure>
+            
+                <section id="comments">
+                  <div id="disqus_thread">
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                        var disqus_shortname = 'ucastblog'; // required: replace example with your forum shortname
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  </div>
+                </section>
+            
+        </div>
+        <div class="col-lg-3 episodeSideBar">
+    <section class="text-center">
+  <h3>Share It</h3>
+  Could this help somebody else? Share it with them.
+  <ul class="list-inline">
+      <li>
+          <a href="http://twitter.com/share?text=Configure the Serial Port on the Raspberry Pi%0A&url=http://microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+
+      </li>
+      <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+      </li>
+      <li>
+          <a href="https://plus.google.com/share?url=http://microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+      </li>
+      
+      <li>
+          <a href="https://pinterest.com/pin/create/button/?url=http://microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/&media=http://microcasts.tv/pi_uart.jpg&description=" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-pinterest"></i></a>
+      </li>
+      
+  </ul>
+</section>
+    
+    
+<section class="supplies">
+  <h3>What You'll Need</h3>
+  <div class="part-list">
+    <ul>
+      
+        <li><span>Raspberry Pi</span><span class="pull-right">1</span></li>
+      
+    </ul></div>
+</section>  
+
+
+</div>
+    </div>
+</div>
+
+
+
+
+    <!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>Have a Tweet</h3>
+          <p>"If 8 bits is a 'byte', and 4 bits is a 'nibble,' I guess that makes 6 bits a 'munch' and 10 bits a 'choking hazard.'"</p>
+          <p style="text-align:right;"><a href="https://twitter.com/slexaxton/status/543492408004984832" target="_blank">@SlexAxton</a></p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Find Me on the Web</h3>
+          <ul class="list-inline">
+            <li>
+              <a href="https://twitter.com/KevinSidwar" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/sidwarkd" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/microcasts" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-youtube-play"></i></a>
+            </li>
+            <li>
+              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-rss"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>About Me</h3>
+          <p>Software Guy with an EE Degree. Raspberry Pi, Spark Core, Tessel, Edison, #IoT. Always looking for a chance to make a difference.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy; HardlySoftware, LLC 2014
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/freelancer.js"></script>
+
+  </body>
+</html>
