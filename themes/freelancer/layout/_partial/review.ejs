@@ -6,32 +6,26 @@
             </div>
       <hr/>
       <h1><%= review.title %></h1>
+      <div class="rating" data-rate="<%= review.overall %>">
+        <i class="star-1">★</i>
+        <i class="star-2">★</i>
+        <i class="star-3">★</i>
+        <i class="star-4">★</i>
+        <i class="star-5">★</i>
+      </div>
       <div class="tag-bar">
-        <span class="label label-info">beginner</span><span class="label label-info">led</span>
+        <% review.tags.each(function(tag){ %>
+          <a href="<%- url_for(tag.path) %>"><span class="label label-info"><%= tag.name %></span></a>
+        <% }) %>
       </div>
       <hr/>
+
       <%- review.content %>
 
-      <% if (review.comments && config.disqus_shortname){ %>
-          <section id="comments">
-            <div id="disqus_thread">
-              <script type="text/javascript">
-                  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                  var disqus_shortname = '<%= config.disqus_shortname %>'; // required: replace example with your forum shortname
-
-                  /* * * DON'T EDIT BELOW THIS LINE * * */
-                  (function() {
-                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                  })();
-              </script>
-              <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
-          </section>
-      <% } %>
     </div>
     <div class="col-lg-3 episodeSideBar">
+      <%- partial('review/rating', {review: review}) %>
+
       <section class="text-center">
         <h3>Share It</h3>
         If this review was helpful please share it with a friend.
@@ -51,8 +45,31 @@
         </ul>
       </section>
 
-      <%- partial('review/rating', {review: review}) %>
-       
     </div>
   </div>
+  <!-- end row -->
+  <div class="row">
+      <div class="col-md-8">
+          <% if (review.comments && config.disqus_shortname){ %>
+              <section id="comments">
+                  <div id="disqus_thread">
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                        var disqus_shortname = '<%= config.disqus_shortname %>'; // required: replace example with your forum shortname
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  </div>
+              </section>
+          <% } %>
+      </div>
+  </div>
+  <!-- end row -->
+
 </div>

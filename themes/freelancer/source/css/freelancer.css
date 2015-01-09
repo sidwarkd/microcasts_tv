@@ -569,6 +569,11 @@ footer .footer-below {
   font-size: 16px;
 }
 
+.tag-bar a:hover
+{
+    text-decoration: none;
+}
+
 .video-container
 {
     margin-top: 20px;
@@ -687,4 +692,43 @@ border: solid 1px #3366CC;
   .rating i {
     text-shadow: none;
   }
+}
+
+.page-nav
+{
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.page-nav > a, .page-nav > span
+{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.page-nav > a:hover,
+.page-nav > span:hover,
+.page-nav > a:focus,
+.page-nav > span:focus {
+  color: #ffffff;
+  background-color: gray;
+  border-color: transparent;
+}
+
+.page-nav > .current
+{
+  z-index: 2;
+  color: #ffffff;
+  background-color: gray;
+  border-color: transparent;
+  cursor: default;
 }
