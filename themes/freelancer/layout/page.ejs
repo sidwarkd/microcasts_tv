@@ -9,4 +9,6 @@
 <% } %>
 <% if (page.path === "blog/index.html"){  %>
   <%- partial('_partial/blog-index', {post: page}) %>
+<% } else { %>
+  <%- partial('_partial/generic_page', {page: page}) %>
 <% } %>

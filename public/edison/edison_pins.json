@@ -1,0 +1,394 @@
+var edison_pins = [
+  { 
+    "jumper": 17, 
+    "pin": 1, 
+    "name": "GP182_PWM2",
+    "description": "GPIO capable of PWM output.",
+    "tags": ["gpio", "pwm"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 2, 
+    "name": "NC",
+    "description": "No connect",
+    "tags": ["nc"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 3, 
+    "name": "NC",
+    "description": "No connect",
+    "tags": ["nc"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 4, 
+    "name": "VIN",
+    "description": "7 to 15V input",
+    "tags": ["power"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 5, 
+    "name": "GP135/UART2_TX",
+    "description": "GPIO, UART2 transmit output.",
+    "tags": ["gpio", "uart", "uart2"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 6, 
+    "name": "RCVR_MODE",
+    "description": "Used for firmware recovery",
+    "tags": ["misc"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 7, 
+    "name": "GP27/I2C6_SCL",
+    "description": "GPIO or I2C6 clock line",
+    "tags": ["gpio", "i2c", "i2c6"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 8, 
+    "name": "GP20/I2C1_SDA",
+    "description": "GPIO or I2C1 data line",
+    "tags": ["gpio", "i2c", "i2c1"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 9, 
+    "name": "GP28/I2C6_SDA",
+    "description": "GPIO or I2C6 data line",
+    "tags": ["gpio", "i2c", "i2c6"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 10, 
+    "name": "GP111/SSP5_FS1",
+    "description": "GPIO or SSP5 chip select 2 output",
+    "tags": ["gpio", "ssp", "ssp5"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 11, 
+    "name": "GP109/SSP5_CLK",
+    "description": "GPIO or SSP5 clock output",
+    "tags": ["gpio", "ssp", "ssp5"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 12, 
+    "name": "GP115/SSP5_TXD",
+    "description": "GPIO or SSP5 data output",
+    "tags": ["gpio", "ssp", "ssp5"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 13, 
+    "name": "OSC_CLK_OUT_0",
+    "description": "High speed clock output",
+    "tags": ["misc", "clock"]
+  },
+  { 
+    "jumper": 17, 
+    "pin": 14, 
+    "name": "GP128/UART1_CTS",
+    "description": "GPIO or UART1 clear to send input",
+    "tags": ["gpio", "uart", "uart1"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 1, 
+    "name": "GP13_PWM1",
+    "description": "GPIO capable of PWM output",
+    "tags": ["gpio", "pwm"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 2, 
+    "name": "GP165",
+    "description": "GPIO",
+    "tags": ["gpio"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 3, 
+    "name": "GPI_PWRBTN_N",
+    "description": "Power button input",
+    "tags": ["misc", "power"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 4, 
+    "name": "MSIC_SLP_CLK2",
+    "description": "32 kHz sleep clock",
+    "tags": ["misc", "clock"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 5, 
+    "name": "V_VBAT_BKUP",
+    "description": "RTC backup battery input",
+    "tags": ["misc", "power", "battery"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 6, 
+    "name": "GP19/I2C1_SCL",
+    "description": "GPIO or I2C1 clock line",
+    "tags": ["gpio", "i2c", "i2c1"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 7, 
+    "name": "GP12_PWM0",
+    "description": "GPIO capable of PWM output",
+    "tags": ["gpio", "pwm"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 8, 
+    "name": "GP183_PWM3",
+    "description": "GPIO capable of PWM output",
+    "tags": ["gpio", "pwm"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 9, 
+    "name": "NC",
+    "description": "No connect",
+    "tags": ["nc"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 10, 
+    "name": "GP110/SSP5_FS0",
+    "description": "GPIO or SSP1 chip select 2 output",
+    "tags": ["gpio", "ssp", "ssp1"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 11, 
+    "name": "GP114/SSP5_RX",
+    "description": "GPIO or SSP5 receive data",
+    "tags": ["gpio", "ssp", "ssp5"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 12, 
+    "name": "GP129/UART1_RTS",
+    "description": "GPIO or UART1 ready to send output",
+    "tags": ["gpio", "uart", "uart1"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 13, 
+    "name": "GP130/UART1_RX",
+    "description": "GPIO or UART1 receive line",
+    "tags": ["gpio", "uart", "uart1"]
+  },
+  { 
+    "jumper": 18, 
+    "pin": 14, 
+    "name": "FW_RCVR",
+    "description": "Firmware recovery. Active high on boot",
+    "tags": ["misc"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 1, 
+    "name": "NC",
+    "description": "No connect",
+    "tags": ["nc"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 2, 
+    "name": "V_V1P80",
+    "description": "System 1.8V I/O output power",
+    "tags": ["misc", "power"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 3, 
+    "name": "GND",
+    "description": "Ground",
+    "tags": ["power", "ground"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 4, 
+    "name": "GP44/ALS_INT_N",
+    "description": "GPIO or ALS interrupt input",
+    "tags": ["gpio", "misc"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 5, 
+    "name": "GP46/ACCELEROMETER_INT_1",
+    "description": "GPIO or accelerometer interrupt input",
+    "tags": ["gpio", "accelerometer"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 6, 
+    "name": "GP48/GYRO_DRDY",
+    "description": "GPIO or gyro data ready input",
+    "tags": ["gpio", "gyro"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 7, 
+    "name": "RESET_OUT#",
+    "description": "System reset out low",
+    "tags": ["misc", "reset"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 8, 
+    "name": "GP131/UART1_TX",
+    "description": "GPIO or UART1 transmit line",
+    "tags": ["gpio", "uart", "uart1"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 9, 
+    "name": "GP14/AUDIO_CODEC_INT",
+    "description": "GPIO or audio codec interrupt",
+    "tags": ["gpio", "audio"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 10, 
+    "name": "GP40/SSP2_CLK",
+    "description": "GPIO or SSP2 clock output",
+    "tags": ["gpio", "ssp", "ssp2"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 11, 
+    "name": "GP43/SSP2_TXD",
+    "description": "GPIO or SSP2 data output",
+    "tags": ["gpio", "ssp", "ssp2"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 12, 
+    "name": "GP77/SD_CDN",
+    "description": "GPIO or SD card detect (active low)",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 13, 
+    "name": "GP82/SD_DAT2",
+    "description": "GPIO or SD data 2",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 19, 
+    "pin": 14, 
+    "name": "GP83/SD_DAT3",
+    "description": "GPIO or SD data 3",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 1, 
+    "name": "V_VSYS",
+    "description": "System input power",
+    "tags": ["power"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 2, 
+    "name": "V_V3P30",
+    "description": "System 3.3V output",
+    "tags": ["power"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 3, 
+    "name": "GP134/UART2_RX",
+    "description": "GPIO or UART2 receive",
+    "tags": ["gpio", "uart", "uart2"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 4, 
+    "name": "GP45/COMPASS_DRDY",
+    "description": "GPIO or compass data ready input",
+    "tags": ["gpio", "compass"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 5, 
+    "name": "GP47/ACCELEROMETER_INT_2",
+    "description": "GPIO or accelerometer interrupt 2",
+    "tags": ["gpio", "accelerometer"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 6, 
+    "name": "GP49/GYRO_INT",
+    "description": "GPIO or gyro interrupt",
+    "tags": ["gpio", "gyro"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 7, 
+    "name": "GP15",
+    "description": "GPIO",
+    "tags": ["gpio"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 8, 
+    "name": "GP84/SD_CLK_FB",
+    "description": "GPIO or SD clock feedback",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 9, 
+    "name": "GP42/SSP2_RXD",
+    "description": "GPIO or SSP2 receive data",
+    "tags": ["gpio", "ssp", "ssp2"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 10, 
+    "name": "GP41/SSP2_FS",
+    "description": "GPIO or SSP2 frame sync output",
+    "tags": ["gpio", "ssp", "ssp2"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 11, 
+    "name": "GP78/SD_CLK",
+    "description": "GPIO or SD clock",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 12, 
+    "name": "GP79/SD_CMD",
+    "description": "GPIO or SD command",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 13, 
+    "name": "GP80/SD_DAT0",
+    "description": "GPIO or SD data 0",
+    "tags": ["gpio", "sd"]
+  },
+  { 
+    "jumper": 20, 
+    "pin": 14, 
+    "name": "GP81/SD_DAT1",
+    "description": "GPIO or SD data 1",
+    "tags": ["spi", "gpio"]
+  }
+]
