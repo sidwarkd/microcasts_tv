@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | Blog: 2015/1</title>
+  <title>µCasts  | Restoring the Edison Drive in Windows Explorer</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -81,101 +81,92 @@
   <!-- /.container-fluid -->
 </nav>
 
-    <div class="container" style="padding-top:120px">
+    
 
+  <div class="container episode-abstract article-entry">
     <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-md-8 postContent article-entry">
-            
-            
+        <div class="col-lg-9">
+            <div class="text-center">
               
-<article class="page-header">
-  <h3><a href="/" style="color:#3366FF;">Restoring the Edison Drive in Windows Explorer</a><span class="text-muted"> (tip)</span></h3>
-  <p class="meta text-muted">
-    <span class="glyphicon glyphicon-calendar"></span> <time>
-  <time datetime="2015-01-26T19:21:41.000Z" itemprop="datePublished">Jan 26, 2015 at 12:21 </time>
-</time>
-    <span class="glyphicon glyphicon-tags"></span>&nbsp;
-    <span class="categories">
-      
-          <a href="/tags/Edison/">Edison</a>
-        
-      
-    </span>
-  </p>
-</article>
-            
+                <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/CGzgu-i6R_A?rel=0" frameborder="0" allowfullscreen=""></iframe>
               
-<article class="page-header">
-  <h3><a href="/" style="color:#3366FF;">Installing Ubilinux on the Edison</a><span class="text-muted"> (episode)</span></h3>
-  <p class="meta text-muted">
-    <span class="glyphicon glyphicon-calendar"></span> <time>
-  <time datetime="2015-01-25T07:05:41.000Z" itemprop="datePublished">Jan 25, 2015 at 0:05 </time>
-</time>
-    <span class="glyphicon glyphicon-tags"></span>&nbsp;
-    <span class="categories">
-      
-          <a href="/tags/Edison/">Edison</a>, 
-        
-      
-          <a href="/tags/Ubilinux/">Ubilinux</a>
-        
-      
-    </span>
-  </p>
-</article>
-            
-            
-        </div>
-
-        <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-            <!-- Blog Search Well -->
-            <div class="well">
-                <h4>Site Search</h4>
-                <form class="search" action="//google.com/search" method="GET">
-                    <input type="hidden" name="as_sitesearch" value="microcasts.tv">
-                    <div class="input-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
-                    </div>
-                </form>
-                <!-- /.input-group -->
             </div>
-
-            <!-- Recent Posts -->
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">Recent Posts</h4>
-              </div>
-                <ul class="list-group">
-                    
-                        <li class="list-group-item"><a href="/blog/2014/12/03/5-stocking-stuffer-ideas-for-your-number-iot-nerd/">5 Stocking Stuffer Ideas For Your #IoT Nerd</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/24/2014-09-24-cereal-box-pi-cases/">Cereal Box Pi Cases</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/16/2014-09-16-the-kitchen-appliance-phase-of-hardware/">The Kitchen Appliance Phase of Hardware</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/15/2014-09-15-specs-arent-everything/">Specs Aren&#39;t Everything</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/06/25/2014-06-25-a-physical-yo-button/">A Physical Yo Button</a></li>
-                    
-                </ul>
+            <h1>&micro;Tip: Restoring the Edison Drive in Windows Explorer</h1>
+            <div class="tag-bar">
+              
+                <a href="/tags/Edison/"><span class="label label-info">Edison</span></a>
+              
             </div>
+            <hr/>
+            <p>So you’ve flashed your Edison and now, when you plug it in, it doesn’t show up as a drive anymore in Windows explorer. At first you might think you broke something but it’s not you, it’s Windows. It actually knows the drive is there and in this video I show you how to get it to show up again in Explorer. For those that like the written word over video, here are the steps.</p>
+<ol>
+<li>Launch the Disk Management tool in Windows.</li>
+<li>Find the Edison Disk which should show up as an Unallocated disk between 500 and 800 MB.</li>
+<li>Right click on the disk and select <strong>Create New Simple Volume</strong>. This will open the New Simple Volume Wizard</li>
+<li>Click Next.</li>
+<li>Click Next</li>
+<li>Change the drive letter assignment if you want and click Next.</li>
+<li>Change the format file system from NTFS to <strong>FAT32</strong>.</li>
+<li>Give your Edison volume a name.</li>
+<li>Click Next.</li>
+<li><p>Click Next on the last screen and Windows will start creating the new volume. </p>
+<p>The volume creation can take a few minutes so just be patient. After that the drive will show up again in Windows Explorer.</p>
+</li>
+</ol>
 
         </div>
+        <div class="col-lg-3 episodeSideBar">
+    
+    
 
-    </div>
-    <!-- /.row -->
+    <section class="text-center">
+  <h3>Share It</h3>
+  Could this help somebody else? Share it with them.
+  <ul class="list-inline">
+      <li>
+          <a href="http://twitter.com/share?text=Restoring the Edison Drive in Windows Explorer%0A&url=http://microcasts.tv/tips/2015/01/26/restoring-edison-drive-in-windows-explorer/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
 
+      </li>
+      <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://microcasts.tv/tips/2015/01/26/restoring-edison-drive-in-windows-explorer/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+      </li>
+      <li>
+          <a href="https://plus.google.com/share?url=http://microcasts.tv/tips/2015/01/26/restoring-edison-drive-in-windows-explorer/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+      </li>
+      
+  </ul>
+</section>
 </div>
-<!-- /.container -->
+    </div>
+    <!-- end row -->
+    <div class="row">
+        <div class="col-md-8">
+            
+                <section id="comments">
+                    <div id="disqus_thread">
+                      <script type="text/javascript">
+                          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                          var disqus_shortname = 'ucastblog'; // required: replace example with your forum shortname
+
+                          /* * * DON'T EDIT BELOW THIS LINE * * */
+                          (function() {
+                              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                      </script>
+                      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+    <!-- end row -->
+</div>
+
+
+
+
 
     <!-- Footer -->
 <footer class="text-center">

@@ -12,6 +12,8 @@
           <div class="thumbnail">
             <% if (tip.vine){ %>
               <iframe class="vine-embed" src="https://vine.co/v/<%= tip.vine %>/embed/simple" width="320" height="320" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+            <% } else if (tip.video){ %>
+              <iframe style="width:100%;" src="//www.youtube-nocookie.com/embed/<%= tip.video %>?rel=0" frameborder="0" allowfullscreen=""></iframe>
             <% } else if (tip.image){ %>
               <img src="<%= tip.image %>">
             <% } %>
