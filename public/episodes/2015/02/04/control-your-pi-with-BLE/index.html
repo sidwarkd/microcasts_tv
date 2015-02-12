@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | Some Love for the Beginners</title>
+  <title>µCasts  | Control your Pi with BLE</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -84,74 +84,85 @@
     
 
 
-
-  <div class="container" style="padding-top:120px; padding-bottom:30px;">
+  <div class="container episode-abstract article-entry">
     <div class="row">
+        <div class="col-lg-9">
+            <div class="video-container text-center">
+                <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/8YA6KVBs1pA?rel=0" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <hr/>
+            <h1>#22 - Control your Pi with BLE</h1>
+            <div class="tag-bar">
+              
+                <a href="/tags/RaspberryPi/"><span class="label label-info">RaspberryPi</span></a>
+              
+                <a href="/tags/Bluetooth/"><span class="label label-info">Bluetooth</span></a>
+              
+            </div>
+            <hr/>
+            <p>This Episode was made specially for <a href="https://twitter.com/TimPietrusky" target="_blank" rel="external">Tim Pietrusky</a>. I asked the Twitterverse if anybody had a question that I could answer in video form and Tim sent this:</p>
+<p><blockquote class="twitter-tweet" data-partner="tweetdeck"><p><a href="https://twitter.com/KevinSidwar" target="_blank" rel="external">@KevinSidwar</a> How can I control an USB <a href="https://twitter.com/hashtag/bluetooth?src=hash" target="_blank" rel="external">#bluetooth</a> adapter via <a href="https://twitter.com/nodejs" target="_blank" rel="external">@nodejs</a> on a <a href="https://twitter.com/Raspberry_Pi" target="_blank" rel="external">@Raspberry_Pi</a> to send data from my smartphone to the Pi?</p>&mdash; Tim Pietrusky (@TimPietrusky) <a href="https://twitter.com/TimPietrusky/status/563131851368566784" target="_blank" rel="external">February 5, 2015</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-        <!-- Blog Content Column -->
-        <div class="col-md-8 postContent article-entry">
-            
-  <h2>
-    <a href="/blog/2013/08/19/2013-08-19-some-love-for-the-beginners/">Some Love for the Beginners</a>
-  </h2>
-
-            <p class="lead">
-              by Kevin
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on 
-  <time datetime="2013-08-20T03:41:00.000Z" itemprop="datePublished">Aug 19, 2013 at 21:41 </time>
-</p>
-            <hr>
-            <h3 id="“Read_the_Datasheet_Again!”">“Read the Datasheet Again!”</h3>
-<p>That’s what somebody told me on a forum once for not seeing a piece of information in a 90 page datasheet.  If there is one thing I’ve learned after many years of doing hobbyist electronics it’s that the various forums are NOT friendly places for beginners. I’m subscribed to receive notices from multiple forums and everyday I see beginners taking heat for “not reading the datasheet” or “not searching the forum.”  It always amazes me how condescending people can be and how quickly they forget that at some point we were all beginners.</p>
-<h3 id="Friend_or_Foe,_You_Choose">Friend or Foe, You Choose</h3>
-<p>I wish people would understand one simple fact.  It takes just as long to be a jerk as it does to make a new friend online.  Instead of answering somebody’s questions with a condescending tone why not take the same amount of time to encourage and support.  Is is so hard to remember that everybody is on a different level as far as experience and knowledge go?  A lot of beginners have no idea that the answer is on page 73, paragraph 6 of the datasheet and publicly shaming them does nothing but boost your own shallow ego.  I’m not sure why smart technical people who stereotypically faced a lot of bullying growing up turn to preying on people just looking for a little help.</p>
-<h3 id="Play_Nice">Play Nice</h3>
-<p>So why the blog post?  Well, it really comes down to a simple thought.  Can we please just play nice?  Can we show some love to the beginners?  Next time you see a “stupid noob” question in a forum, step up and help out.  Welcome them to the community and please, whatever you do, don’t treat him/her like an illiterate waste of your time because that “idiot” is an actual person on the other side of the interwebs just looking for some help.</p>
+<p>So Tim, hopefully this answers your question and can also be useful to others looking to do something similar in their project.</p>
+<p><strong>Note for Android Users:</strong> I don’t have an Android device so I linked up an app that looks like it should do things similar to LightBlue. Basically you need a test app that can explore and interact with the characteristics of a BLE device service.</p>
 
         </div>
+        <div class="col-lg-3 episodeSideBar">
+    
+<section class="resources">
+  <h3>Resources</h3>
+  <ul>
+  
+    <li><a href="https://learn.adafruit.com/node-embedded-development/installing-node-dot-js">Install Node and NPM on Raspbian</a></li>
+  
+    <li><a href="https://github.com/sandeepmistry/bleno">Bleno Project</a></li>
+  
+    <li><a href="http://www.adafruit.com/product/1327">USB Bluetooth Adapter Used</a></li>
+  
+    <li><a href="https://itunes.apple.com/us/app/lightblue-bluetooth-low-energy/id557428110?mt=8">LightBlue iOS App</a></li>
+  
+    <li><a href="https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner&amp;hl=en">BLE Scanner for Android</a></li>
+  
+  </ul>
+</section>
 
-        <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
-            <!-- Blog Search -->
-            <div class="well">
-                <h4>Site Search</h4>
-                <form class="search" action="//google.com/search" method="GET">
-                    <input type="hidden" name="as_sitesearch" value="microcasts.tv">
-                    <div class="input-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
-                    </div>
-                </form>
-                <!-- /.input-group -->
-            </div>
+    
+<section class="supplies">
+  <h3>What You'll Need</h3>
+  <div class="part-list">
+    <ul>
+      
+        <li><span>Raspberry Pi</span><span class="pull-right">1</span></li>
+      
+        <li><span>USB Bluetooth Adapter</span><span class="pull-right">1</span></li>
+      
+    </ul></div>
+</section>  
 
-            <!-- Recent Posts -->
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">Recent Posts</h4>
-              </div>
-                <ul class="list-group">
-                    
-                        <li class="list-group-item"><a href="/blog/2014/12/03/5-stocking-stuffer-ideas-for-your-number-iot-nerd/">5 Stocking Stuffer Ideas For Your #IoT Nerd</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/24/2014-09-24-cereal-box-pi-cases/">Cereal Box Pi Cases</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/16/2014-09-16-the-kitchen-appliance-phase-of-hardware/">The Kitchen Appliance Phase of Hardware</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/09/15/2014-09-15-specs-arent-everything/">Specs Aren&#39;t Everything</a></li>
-                    
-                        <li class="list-group-item"><a href="/blog/2014/06/25/2014-06-25-a-physical-yo-button/">A Physical Yo Button</a></li>
-                    
-                </ul>
-            </div>
 
-        </div>
+    <section class="text-center">
+  <h3>Share It</h3>
+  Could this help somebody else? Share it with them.
+  <ul class="list-inline">
+      <li>
+          <a href="http://twitter.com/share?text=Control your Pi with BLE%0A&url=http://microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
 
+      </li>
+      <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+      </li>
+      <li>
+          <a href="https://plus.google.com/share?url=http://microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+      </li>
+      
+      <li>
+          <a href="https://pinterest.com/pin/create/button/?url=http://microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/&media=http://microcasts.tv/pi_ble_thumb.jpg&description=" class="btn-social-inverse btn-outline-inverse" target="_blank"><i class="fa fa-fw fa-pinterest"></i></a>
+      </li>
+      
+  </ul>
+</section>
+</div>
     </div>
     <!-- /.row -->
     <div class="row">
@@ -176,9 +187,9 @@
             
         </div>
     </div>
-
 </div>
-<!-- /.container -->
+
+
 
 
     <!-- Footer -->
