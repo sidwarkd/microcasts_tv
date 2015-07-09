@@ -1,0 +1,15 @@
+<section id="reviews" class="episodes" style="padding-top:40px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Reviews</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <% site.posts.find({type:"review"}).limit(100).each(function(review){ %>
+          <%- partial('_partial/review/preview', {review: review}) %>
+      <%  }) %>
+    </div>
+  </div>
+</section>

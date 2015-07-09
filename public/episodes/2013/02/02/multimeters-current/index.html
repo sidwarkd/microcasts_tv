@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | Multimeters (I)</title>
+  <title>µCasts | Multimeters (I)</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -26,7 +26,6 @@
   <link href="/css/freelancer.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-
   <!-- Custom Fonts -->
   <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -40,10 +39,9 @@
   <![endif]-->
 
 </head>
-  <body id="page-top" class="index">
-    <!-- Navigation -->
 
-<nav class="navbar navbar-default navbar-fixed-top" >
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -65,12 +63,13 @@
         <li class="page-scroll">
           <a href="/episodes">Episodes</a>
         </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
         <li class="page-scroll">
-          <a href="/reviews">Reviews</a>
-        </li>
-        <li class="page-scroll">
-          <a href="/tips">Tips</a>
-        </li>
+          <a href="#tips">Tips</a>
+        </li>  -->
         <li class="page-scroll">
           <a href="/blog">Blog</a>
         </li>
@@ -96,11 +95,11 @@
               
                 <a href="/tags/beginner/"><span class="label label-info">beginner</span></a>
               
-                <a href="/tags/tools/"><span class="label label-info">tools</span></a>
+                <a href="/tags/current/"><span class="label label-info">current</span></a>
               
                 <a href="/tags/meters/"><span class="label label-info">meters</span></a>
               
-                <a href="/tags/current/"><span class="label label-info">current</span></a>
+                <a href="/tags/tools/"><span class="label label-info">tools</span></a>
               
             </div>
             <hr/>
@@ -108,14 +107,10 @@
 <li><a href="/episodes/2013/02/02/multimeters-voltage">Multimeters: Part 1</a></li>
 <li><a href="/episodes/2013/02/02/multimeters-resistance">Multimeters: Part 3</a></li>
 </ul>
-<h2 id="What_is_Current">What is Current</h2>
-<p>So we’ll start with the wikipedia definition again.  Current is the “flow of electric charge through an electric conductor.”  Let’s refer back to our water analogy that we <a href="/episodes/2013/02/02/multimeters_voltage">started in the voltage episode</a> of multimeters.  We said that the voltage was analogous to the pressure that a pump could provide to a water system.  How fast the water actually flows through the pipes would be analogous to current flow.  Again, we’re not going for deep academic understanding of this stuff although if you want to, more power to you.  We just need to know enough to get our projects off the ground.  So think of current as how fast electricity is flowing through your wires and into your circuit.</p>
-<h2 id="DC_Current">DC Current</h2>
-<p>As with voltage, current has two flavors: AC and DC.  DC is primarily what we’ll be messing with and stands for “direct current”.  Just as a DC voltage is always “on” a DC current is always “flowing.”  It doesn’t necessarily always have to flow at the same rate but it will always flow in the same direction.  It’s easiest just to remember that current flows from high voltage to low voltage.  More specifically, it will always try to flow to ground and will take the path of least resistance.</p>
-<h2 id="AC_Current">AC Current</h2>
-<p>As with AC voltage, AC current will change direction.  It doesn’t always flow in one direction.  It will constantly switch directions from positive to negative and back to positive.</p>
-<h2 id="Remember_To_Measure_Inline">Remember To Measure Inline</h2>
-<p>Remember that measuring current is different from measuring voltage.  You don’t just put the probes on different points of your circuit.  You always have to measure current <strong>inline</strong>.  Remember it’s like you’re trying to figure out how fast the water is flowing <em>through</em> your pipes so you have to actually interrupt your circuit and hook up inline.</p>
+<h2 id="What_is_Current">What is Current</h2><p>So we’ll start with the wikipedia definition again.  Current is the “flow of electric charge through an electric conductor.”  Let’s refer back to our water analogy that we <a href="/episodes/2013/02/02/multimeters_voltage">started in the voltage episode</a> of multimeters.  We said that the voltage was analogous to the pressure that a pump could provide to a water system.  How fast the water actually flows through the pipes would be analogous to current flow.  Again, we’re not going for deep academic understanding of this stuff although if you want to, more power to you.  We just need to know enough to get our projects off the ground.  So think of current as how fast electricity is flowing through your wires and into your circuit.</p>
+<h2 id="DC_Current">DC Current</h2><p>As with voltage, current has two flavors: AC and DC.  DC is primarily what we’ll be messing with and stands for “direct current”.  Just as a DC voltage is always “on” a DC current is always “flowing.”  It doesn’t necessarily always have to flow at the same rate but it will always flow in the same direction.  It’s easiest just to remember that current flows from high voltage to low voltage.  More specifically, it will always try to flow to ground and will take the path of least resistance.</p>
+<h2 id="AC_Current">AC Current</h2><p>As with AC voltage, AC current will change direction.  It doesn’t always flow in one direction.  It will constantly switch directions from positive to negative and back to positive.</p>
+<h2 id="Remember_To_Measure_Inline">Remember To Measure Inline</h2><p>Remember that measuring current is different from measuring voltage.  You don’t just put the probes on different points of your circuit.  You always have to measure current <strong>inline</strong>.  Remember it’s like you’re trying to figure out how fast the water is flowing <em>through</em> your pipes so you have to actually interrupt your circuit and hook up inline.</p>
 
         </div>
         <div class="col-lg-3 episodeSideBar">
@@ -183,7 +178,6 @@
 
 
 
-
     <!-- Footer -->
 <footer class="text-center">
   <div class="footer-above">
@@ -212,7 +206,7 @@
         </div>
         <div class="footer-col col-md-4">
           <h3>About Me</h3>
-          <p>Software Guy with an EE Degree. Raspberry Pi, Spark Core, Tessel, Edison, #IoT. Always looking for a chance to make a difference.</p>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
         </div>
       </div>
     </div>
@@ -221,12 +215,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          Copyright &copy; HardlySoftware, LLC 2014
+          Copyright &copy; HardlySoftware, LLC 2015
         </div>
       </div>
     </div>
   </div>
 </footer>
+
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 
@@ -234,9 +229,6 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpAnimatedHeader.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/freelancer.js"></script>

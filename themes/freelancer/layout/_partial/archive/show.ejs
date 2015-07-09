@@ -1,0 +1,16 @@
+<article class="page-header">
+  <h3><a href="<%- url_for(post.path) %>" style="color:#3366FF;"><%= post.title %></a><span class="text-muted"><% var type = post.type; type[0] = type[0].toUpperCase();%> (<%= type %>)</span></h3>
+  <p class="meta text-muted">
+    <span class="glyphicon glyphicon-calendar"></span> <time><%- partial('../blog/date', { date_format: null, time_format: null}) %></time>
+    <span class="glyphicon glyphicon-tags"></span>&nbsp;
+    <span class="categories">
+      <% post.tags.each(function(tag, i){ 
+         if (i === post.tags.length - 1) { %>
+          <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+        <% } else { %>
+          <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>, 
+        <% } %>
+      <% }) %>
+    </span>
+  </p>
+</article>

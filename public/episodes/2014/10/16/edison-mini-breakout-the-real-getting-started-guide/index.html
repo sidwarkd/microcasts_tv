@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | Edison Mini Breakout: The Real Getting Started Guide</title>
+  <title>µCasts | Edison Mini Breakout: The Real Getting Started Guide</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -26,7 +26,6 @@
   <link href="/css/freelancer.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-
   <!-- Custom Fonts -->
   <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -40,10 +39,9 @@
   <![endif]-->
 
 </head>
-  <body id="page-top" class="index">
-    <!-- Navigation -->
 
-<nav class="navbar navbar-default navbar-fixed-top" >
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -65,12 +63,13 @@
         <li class="page-scroll">
           <a href="/episodes">Episodes</a>
         </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
         <li class="page-scroll">
-          <a href="/reviews">Reviews</a>
-        </li>
-        <li class="page-scroll">
-          <a href="/tips">Tips</a>
-        </li>
+          <a href="#tips">Tips</a>
+        </li>  -->
         <li class="page-scroll">
           <a href="/blog">Blog</a>
         </li>
@@ -105,12 +104,9 @@
 <p>So I sat down the other night to finally start playing with my <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html" target="_blank" rel="external">Intel Edison</a> board and quickly found out that the documentation for this thing really sucks. There are forums and pages and PDFs spread all over the Intel site and most of the content centers around using the Arduino breakout board. For those of us using the <a href="https://www.sparkfun.com/products/13025" target="_blank" rel="external">mini breakout board</a> we are left to our own resourcefulness to get this thing up and running. There is even incorrect info in the <a href="https://communities.intel.com/docs/DOC-23147" target="_blank" rel="external">Quickstart</a> that might leave beginners scratching their heads. If Intel wants this thing to get widespread community adoption it needs to spend significantly more time making the first experience a better one. </p>
 <p>Until then, here is my version of how to get started with the Edison mini breakout board. This is the guide I wish I had for my first experience.</p>
 <a id="more"></a>
-
-<h2 id="Unboxing_and_Setup">Unboxing and Setup</h2>
-<p>So Intel nailed the unboxing part. The Edison comes in a sweet box and opening it evokes a few oooohs and aaahs. That’s about where it ends though. They have a getting started url right under the box lid which makes you think that they are really going to help you through the process but unfortunately you’re mostly on your own at this point. The link has only partially relevant instructions to the mini breakout and even some of the relevant stuff has errors.</p>
+<h2 id="Unboxing_and_Setup">Unboxing and Setup</h2><p>So Intel nailed the unboxing part. The Edison comes in a sweet box and opening it evokes a few oooohs and aaahs. That’s about where it ends though. They have a getting started url right under the box lid which makes you think that they are really going to help you through the process but unfortunately you’re mostly on your own at this point. The link has only partially relevant instructions to the mini breakout and even some of the relevant stuff has errors.</p>
 <p><strong>STOP:</strong> Installing a header is completely optional but if you intend to connect your Edison to external hardware at some point I recommend you solder one on now. You can always do it later but the tiny 70 pin Hirose connector makes me nervous so I’d rather not stress it with unnecessary insertions and removals.</p>
-<h3 id="Install_a_Header_(Optional)">Install a Header (Optional)</h3>
-<p>If you intend to connect any external hardware to your Edison you’re going to need access to the GPIO pins. These are located under the Edison itself on the breakout board. </p>
+<h3 id="Install_a_Header_(Optional)">Install a Header (Optional)</h3><p>If you intend to connect any external hardware to your Edison you’re going to need access to the GPIO pins. These are located under the Edison itself on the breakout board. </p>
 <p>You can individually solder wires to this but I personally recommend breaking all of the pins out to a header for easy connection. This is really easy to do even for a beginner so don’t be afraid. The pins are standard 0.1” spaced so any <a href="https://www.sparkfun.com/products/116" target="_blank" rel="external">generic male header strip</a> will do. Break the header strip into 14 pin segments and install them side by side on a breadboard as seen below. Make sure the long end of the header strip pins is in the breadboard so the short side is pointing up.</p>
 <h1 style="text-align:center;"><img src="header_guide.jpg"></h1>
 
@@ -120,29 +116,23 @@
 <p>For soldering I highly recommend using a <a href="http://www.alliedelec.com/search/productdetail.aspx?SKU=70177953" target="_blank" rel="external">flux pen</a>. It will help the solder flow into the joints. Take your time soldering and make sure you get a good solder flow on each joint and be careful not to over-apply solder as it will ball up on the pin and not create a good joint. Here is what mine looked like when I was done. You can see that there are a few joints that aren’t as nice as the others but we should be okay. I used some rubbing alcohol and a clean t-shirt rag to clean the flux up after soldering.</p>
 <h1 style="text-align:center;"><img src="header_post_solder.jpg"></h1>
 
-<h3 id="Insert_the_Edison">Insert the Edison</h3>
-<p>Because of the mounting holes it’s pretty much impossible to install the Edison the wrong way on the breakout board. Just be careful seating it as the 70 pin connector has very tiny contacts that can be damaged if you’re not careful. Get the Edison nice and level over the connector and push straight down on it right about where the sticker is below the metal housing. You should hear a good sounding click.</p>
+<h3 id="Insert_the_Edison">Insert the Edison</h3><p>Because of the mounting holes it’s pretty much impossible to install the Edison the wrong way on the breakout board. Just be careful seating it as the 70 pin connector has very tiny contacts that can be damaged if you’re not careful. Get the Edison nice and level over the connector and push straight down on it right about where the sticker is below the metal housing. You should hear a good sounding click.</p>
 <h1 style="text-align:center;"><img src="push_here.jpg"></h1>
 
 <p>Install the two nuts provided to hold the Edison in place.</p>
-<h2 id="Install_Software_and_Drivers">Install Software and Drivers</h2>
-<p>The Quickstart guide provided by Intel has you install the Arduino IDE next. Now even though this isn’t the Arduino breakout you can still write sketches and run them. You just have to break out the appropriate pins yourself. I’m not interested in Arduino functionality so I opted to skip that part but if you want you can <a href="https://communities.intel.com/docs/DOC-23242" target="_blank" rel="external">install that now</a>.</p>
+<h2 id="Install_Software_and_Drivers">Install Software and Drivers</h2><p>The Quickstart guide provided by Intel has you install the Arduino IDE next. Now even though this isn’t the Arduino breakout you can still write sketches and run them. You just have to break out the appropriate pins yourself. I’m not interested in Arduino functionality so I opted to skip that part but if you want you can <a href="https://communities.intel.com/docs/DOC-23242" target="_blank" rel="external">install that now</a>.</p>
 <p>The <a href="https://communities.intel.com/docs/DOC-23147#jive_content_id_Step_3__Install_required_drivers" target="_blank" rel="external">driver installation step</a> from the Quickstart is one of the few items they nailed in the guide and you can follow the instructions <a href="https://communities.intel.com/docs/DOC-23147#jive_content_id_Step_3__Install_required_drivers" target="_blank" rel="external">there</a>. Basically you’re downloading and installing two sets of drivers: one for the FTDI interface and one for the Edison itself. Here are the links for both. Just click through the installations.</p>
-<h3 id="FTDI_Drivers">FTDI Drivers</h3>
-<ul>
+<h3 id="FTDI_Drivers">FTDI Drivers</h3><ul>
 <li><a href="http://www.ftdichip.com/Drivers/CDM/CDM%20v2.10.00%20WHQL%20Certified.exe" target="_blank" rel="external">FTDI Driver Setup</a></li>
 </ul>
-<h3 id="Edison_Drivers">Edison Drivers</h3>
-<ul>
+<h3 id="Edison_Drivers">Edison Drivers</h3><ul>
 <li><a href="http://downloadmirror.intel.com/24271/eng/IntelEdisonDriverSetup1.0.0.exe" target="_blank" rel="external">Edison Windows Driver Setup</a></li>
 </ul>
-<h3 id="Terminal_Emulator">Terminal Emulator</h3>
-<ul>
+<h3 id="Terminal_Emulator">Terminal Emulator</h3><ul>
 <li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank" rel="external">PuTTY</a></li>
 </ul>
 <p>For your computer to talk to the Edison at first you will need to use a serial connection. This is acheived over USB with the FTDI drivers which essentially speak USB to the FTDI chip on your breakout board and then the FTDI chip translates USB to serial for the Edison to understand. A terminal emulator is the program that runs on your PC that manages that connection. The most popular one is <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank" rel="external">PuTTY</a> but you can use any terminal emulator you feel comfortable with.</p>
-<h2 id="Powering_Your_Edison">Powering Your Edison</h2>
-<p>This one stumped me a little at first. There are two USB ports on the mini breakout and I assumed one was for power and communication and the other was for connecting devices to the Edison so it could act as a USB host. You probably didn’t assume that but if you did you would be wrong…just like me. One of the USB ports is for communicating with your PC via the terminal emulator and the other is one of the ways you can power the Edison. As found in <a href="https://communities.intel.com/thread/55455" target="_blank" rel="external">this thread</a> there are actually 3 different ways to power your Edison via the breakout board.</p>
+<h2 id="Powering_Your_Edison">Powering Your Edison</h2><p>This one stumped me a little at first. There are two USB ports on the mini breakout and I assumed one was for power and communication and the other was for connecting devices to the Edison so it could act as a USB host. You probably didn’t assume that but if you did you would be wrong…just like me. One of the USB ports is for communicating with your PC via the terminal emulator and the other is one of the ways you can power the Edison. As found in <a href="https://communities.intel.com/thread/55455" target="_blank" rel="external">this thread</a> there are actually 3 different ways to power your Edison via the breakout board.</p>
 <ul>
 <li>5V via the USB connector</li>
 <li>7-12V via J21</li>
@@ -150,8 +140,7 @@
 </ul>
 <h1 style="text-align:center;"><img src="power_options.jpg"></h1>
 
-<h2 id="Configuring_Your_Edison">Configuring Your Edison</h2>
-<p>Once you’ve decided on a power strategy for your Edison it’s time to power it up and play with it. By default your Edison comes with <a href="https://www.yoctoproject.org/" target="_blank" rel="external">Yocto Linux</a> installed but you’ll need to configure it. </p>
+<h2 id="Configuring_Your_Edison">Configuring Your Edison</h2><p>Once you’ve decided on a power strategy for your Edison it’s time to power it up and play with it. By default your Edison comes with <a href="https://www.yoctoproject.org/" target="_blank" rel="external">Yocto Linux</a> installed but you’ll need to configure it. </p>
 <ol>
 <li>Connect the Edison to your PC with the USB cable.</li>
 <li>Apply power. The easiest way to do this is via the second USB port. I didn’t have a free port on my PC so I used a USB battery pack and it worked great.</li>
@@ -181,8 +170,7 @@
 </li>
 </ol>
 <p>Follow the prompts through the configuration. If the Edison doesn’t locate any WiFi networks at first just press <strong>0</strong> to have it rescan. Mine didn’t find any the first time around for some reason.</p>
-<h2 id="Start_Poking_Around">Start Poking Around</h2>
-<p>Once you’ve finished configuring your Edison you can essentially treat it like a Linux machine. I was surprised to find that it had NodeJS and NPM installed and was able to get an Express website up and running within a couple of minutes. </p>
+<h2 id="Start_Poking_Around">Start Poking Around</h2><p>Once you’ve finished configuring your Edison you can essentially treat it like a Linux machine. I was surprised to find that it had NodeJS and NPM installed and was able to get an Express website up and running within a couple of minutes. </p>
 <p>A few things of note:</p>
 <ul>
 <li>If you want to create/edit files the Edison comes with Vim which can be launched with <strong>vi</strong></li>
@@ -259,7 +247,6 @@
 
 
 
-
     <!-- Footer -->
 <footer class="text-center">
   <div class="footer-above">
@@ -288,7 +275,7 @@
         </div>
         <div class="footer-col col-md-4">
           <h3>About Me</h3>
-          <p>Software Guy with an EE Degree. Raspberry Pi, Spark Core, Tessel, Edison, #IoT. Always looking for a chance to make a difference.</p>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
         </div>
       </div>
     </div>
@@ -297,12 +284,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          Copyright &copy; HardlySoftware, LLC 2014
+          Copyright &copy; HardlySoftware, LLC 2015
         </div>
       </div>
     </div>
   </div>
 </footer>
+
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 
@@ -310,9 +298,6 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpAnimatedHeader.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/freelancer.js"></script>

@@ -1,0 +1,10 @@
+<div class="col-sm-4 episode-item">
+  <a href="<%- url_for(episode.path) %>" class="episode-link">
+    <div class="thumbnail">
+      <img src="<%= '/' + episode.path + episode.image %>" class="img-responsive" alt="">
+      <div class="caption">
+        <a href="<%- url_for(episode.path) %>"><p style="text-align:center"><%= episode.title %></p></a>
+      </div>
+    </div>
+  </a>
+</div>

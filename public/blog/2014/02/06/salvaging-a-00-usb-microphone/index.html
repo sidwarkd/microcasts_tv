@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <title>µCasts | Salvaging a $100 USB Microphone</title>
+
+  
+    <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!-- Custom Fonts -->
+  <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/img/uCasts.png" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="/episodes">Episodes</a>
+        </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
+        <li class="page-scroll">
+          <a href="#tips">Tips</a>
+        </li>  -->
+        <li class="page-scroll">
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+    
+
+
+
+  <div class="container" style="padding-top:40px; padding-bottom:30px;">
+    <div class="row">
+
+        <!-- Blog Content Column -->
+        <div class="col-md-8 postContent article-entry">
+            
+  <h2>
+    <a href="/blog/2014/02/06/salvaging-a-00-usb-microphone/">Salvaging a $100 USB Microphone</a>
+  </h2>
+
+            <p class="lead">
+              by Kevin
+            </p>
+            <p><span class="glyphicon glyphicon-time"></span> Posted on 
+  <time datetime="2014-02-07T04:47:00.000Z" itemprop="datePublished">Feb 6, 2014 at 21:47 </time>
+</p>
+            <hr>
+            <h2 id="Back_Story">Back Story</h2><p>A while back a good friend of mine gave me a <a href="http://www.amazon.com/Blue-Microphones-Yeti-USB-Microphone/dp/B002VA464S/ref=sr_1_1?ie=UTF8&amp;qid=1391757018&amp;sr=8-1&amp;keywords=blue+microphone+yeti" target="_blank" rel="external">Blue Yeti microphone</a> from work that he said they were going to throw away because the mini USB port had ripped out of it. I told him I’d take it and see if I could fix it. It seemed like the only thing wrong with it was that the connector had literally been ripped out of the case. How they were able to accomplish that I don’t know. So I did what any self-respecting DIYer would do: I called Blue and asked if they could give me the part number for the USB connector.<br><blockquote><p>“I’m sorry, I can’t give you that information. It’s proprietary”</p>
+</blockquote></p>
+<p>Really? A standard mini USB connector is proprietary? Give me a break Blue. So I did what any self-respecting Twitter user would do.</p>
+<p> <blockquote class="twitter-tweet" lang="en"><p>Wow <a href="https://twitter.com/BlueMicrophones" target="_blank" rel="external">@BlueMicrophones</a> won&#39;t give me the mini usb part number so I can fix a busted mic someone trashed. Not very <a href="https://twitter.com/search?q=%23DIY&amp;src=hash" target="_blank" rel="external">#DIY</a> friendly. <a href="https://twitter.com/search?q=%23servicefail&amp;src=hash" target="_blank" rel="external">#servicefail</a></p>&mdash; Kevin Sidwar (@KevinSidwar) <a href="https://twitter.com/KevinSidwar/statuses/336590188488826880" target="_blank" rel="external">May 20, 2013</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="The_Repair">The Repair</h2><p>Having vented my rage on Twitter I logged on to <a href="http://www.mouser.com/Connectors/USB-Connectors/_/N-88hmf/" target="_blank" rel="external">Mouser</a> to find a suitable replacement. I found one that I thought would work but never got around to ordering it. Fast forward almost a year and I decide I want to try to fix it but don’t want to find the part again and wait for it to ship so I figured I might be able to just hack up a USB cable and solder it directly to the PCB where the connector ripped out. Here’s how it looked when I took it apart.</p>
+<h1 style="text-align:center"><img src="/img/port/broken_mini_usb.jpg" title="Broken Mini USB Connector Broken Mini USB Connector"></h1>
+
+<p>Again, how they managed to do this is beyond me. But it came off fairly clean so all I needed to do was remove the legs from the connector and solder in leads from a USB cable I cut. But which wires go to which holes? Well, if you take a closer look at the back side of the PCB you can get a pretty decent idea of which connections are which. We know that USB uses 4 connections: Supply, Ground, D+, and D-.</p>
+<h1 style="text-align:center"><img src="/img/port/usb_connections.jpg" title="Closeup of UBS connection traces Closeup of UBS connection traces"></h1>
+
+<p>From this image we can guess that the thicker traces are the power lines and the thinner ones are the USB data lines. One of the connection holes isn’t connected to anything. So figuring out which power line is ground was easy. Just set the meter to continuity mode, connect one probe to a known ground point (like an internal metal mount) and then see which of the thick traces gives you the continuity beep. That coupled with this diagram I found for a similar USB connector allowed me to identify D+ and D-.</p>
+<h1 style="text-align:center"><img src="/img/port/usb_connector_pinout.jpg" title="Pinout connections Pinout connections"></h1>
+
+<h2 id="Soldering">Soldering</h2><p>The solder work on this job was a little challenging for me. I quickly gave up on trying to solder the USB cable directly to the connector holes as the tiny wires were hard to handle. Instead I soldered some 22AWG leads from the connector holes that could exit the mic case through the mini USB opening and then I soldered the USB cable wires to those leads. Here are some shots of that.</p>
+<h1 style="text-align:center"><img src="/img/port/leads_soldered.jpg" title="Leads soldered on Leads soldered on"></h1>
+
+<h1 style="text-align:center"><img src="/img/port/leads_usb_opening.jpg" title="Leads coming out of case Leads coming out of case"></h1>
+
+<p>I made sure all of the USB wires were isolated from each other using shrink wrap and then finished the whole job up with a big piece of shrink wrap over everything to leave a nice clean look. When I plugged it in it worked first time.</p>
+<h2 id="Moral">Moral</h2><p>With just a little knowledge and some soldering skills there are lots of things that can be reclaimed from the junk pile.</p>
+<p>In closing I’d like to thank corporate america for having so much money that they just trash $100 mics because connectors break off. More importantly though I’d like to send a big “Suck It” to Blue for hating on the DIY fix-it community. It’s just a mini USB connector. I didn’t need company secrets to fix it. </p>
+<h1 style="text-align:center"><img src="/img/port/repaired_mic.jpg" title="Repaired Mic Repaired Mic"></h1>
+
+<p>P.S. Blue, if you had simply given me the part number I would have sung your praises on social networks and to anybody in the tech space that would listen. I also would have gone to you first as soon as I needed a new mic. Instead I’ll never recommend your microphones to anybody and will personally never pay you a cent for one.</p>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <!-- Blog Search -->
+            <div class="well">
+                <h4>Site Search</h4>
+                <form class="search" action="//google.com/search" method="GET">
+                    <input type="hidden" name="as_sitesearch" value="microcasts.tv">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                    </div>
+                </form>
+                <!-- /.input-group -->
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">Recent Posts</h4>
+              </div>
+                <ul class="list-group">
+                    
+                        <li class="list-group-item"><a href="/blog/2014/12/03/5-stocking-stuffer-ideas-for-your-number-iot-nerd/">5 Stocking Stuffer Ideas For Your #IoT Nerd</a></li>
+                    
+                        <li class="list-group-item"><a href="/blog/2014/09/24/cereal-box-pi-cases/">Cereal Box Pi Cases</a></li>
+                    
+                        <li class="list-group-item"><a href="/blog/2014/09/16/the-kitchen-appliance-phase-of-hardware/">The Kitchen Appliance Phase of Hardware</a></li>
+                    
+                        <li class="list-group-item"><a href="/blog/2014/09/15/specs-arent-everything/">Specs Aren&#39;t Everything</a></li>
+                    
+                        <li class="list-group-item"><a href="/blog/2014/06/25/a-physical-yo-button/">A Physical Yo Button</a></li>
+                     
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-md-8">
+            
+                <section id="comments">
+                    <div id="disqus_thread">
+                      <script type="text/javascript">
+                          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                          var disqus_shortname = 'ucastblog'; // required: replace example with your forum shortname
+
+                          /* * * DON'T EDIT BELOW THIS LINE * * */
+                          (function() {
+                              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                      </script>
+                      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+
+    <!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>What's With the &micro;</h3>
+          <p>It's a prefix (pronounced 'micro') in the metric system meaning one millionth. I want to provide micro-sized content to help you hack.</p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Find Me on the Web</h3>
+          <ul class="list-inline">
+            <li>
+              <a href="https://twitter.com/KevinSidwar" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/sidwarkd" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/microcasts" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-youtube-play"></i></a>
+            </li>
+            <li>
+              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-rss"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>About Me</h3>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy; HardlySoftware, LLC 2015
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/freelancer.js"></script>
+
+  </body>
+</html>

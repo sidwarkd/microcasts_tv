@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | Query Temperature on Raspberry Pi</title>
+  <title>µCasts | Query Temperature on Raspberry Pi</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -26,7 +26,6 @@
   <link href="/css/freelancer.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-
   <!-- Custom Fonts -->
   <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -40,10 +39,9 @@
   <![endif]-->
 
 </head>
-  <body id="page-top" class="index">
-    <!-- Navigation -->
 
-<nav class="navbar navbar-default navbar-fixed-top" >
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -65,12 +63,13 @@
         <li class="page-scroll">
           <a href="/episodes">Episodes</a>
         </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
         <li class="page-scroll">
-          <a href="/reviews">Reviews</a>
-        </li>
-        <li class="page-scroll">
-          <a href="/tips">Tips</a>
-        </li>
+          <a href="#tips">Tips</a>
+        </li>  -->
         <li class="page-scroll">
           <a href="/blog">Blog</a>
         </li>
@@ -97,23 +96,13 @@
             </div>
             <hr/>
             <p>I recently installed a Raspberry Pi in a server closet at home. I have it connected to an older laser printer so it acts as a print server. Since it is in a small space I want to be able to monitor the temperature from time to time. After some searching online I found two ways to do this from the command line that work quite well.</p>
-<figure class="highlight bash"><pre><span class="line">pi@raspberrypi ~ $ /opt/vc/bin/vcgencmd measure_temp</span>
-</pre></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspberrypi ~ $ /opt/vc/bin/vcgencmd measure_temp</span><br></pre></td></tr></table></figure>
 <p>The output of this command looks like this:</p>
-<figure class="highlight bash"><pre><span class="line">pi@raspberrypi ~ $ /opt/vc/bin/vcgencmd measure_temp</span>
-<span class="line">temp=<span class="number">43.3</span><span class="string">'C</span></span>
-</pre></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspberrypi ~ $ /opt/vc/bin/vcgencmd measure_temp</span><br><span class="line">temp=<span class="number">43.3</span><span class="string">'C</span></span><br></pre></td></tr></table></figure>
 <p>The other way to display this information is to <strong>cat</strong> the contents of a file:</p>
-<figure class="highlight bash"><pre><span class="line">pi@raspberrypi ~ $ cat /sys/class/thermal/thermal_zone0/temp</span>
-</pre></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pi@raspberrypi ~ $ cat /sys/class/thermal/thermal_zone0/temp</span><br></pre></td></tr></table></figure>
 <p>This time you will need to divide by 1000 to get the temp in degrees Celsius.</p>
-<p>Output:</p>
-<figure class="highlight bash"><pre><span class="line"><span class="number">43312</span></span>
-</pre></figure>
-
+<p>Output:<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="number">43312</span></span><br></pre></td></tr></table></figure></p>
 <p>I’ve notice that the two results can differ slightly but not by more than a few tenths of a degree Celsius.</p>
 
         </div>
@@ -198,7 +187,7 @@
         </div>
         <div class="footer-col col-md-4">
           <h3>About Me</h3>
-          <p>Software Guy with an EE Degree. Raspberry Pi, Spark Core, Tessel, Edison, #IoT. Always looking for a chance to make a difference.</p>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
         </div>
       </div>
     </div>
@@ -207,12 +196,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          Copyright &copy; HardlySoftware, LLC 2014
+          Copyright &copy; HardlySoftware, LLC 2015
         </div>
       </div>
     </div>
   </div>
 </footer>
+
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 
@@ -220,9 +210,6 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpAnimatedHeader.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/freelancer.js"></script>

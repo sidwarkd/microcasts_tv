@@ -1,12 +1,12 @@
 <% if (page.type === "review"){  %>
-  <%- partial('_partial/review', {review: page}) %>
+  <%- partial('_partial/review/show', {review: page}) %>
 <% } %>
 <% if (page.type === "tip"){  %>
-  <%- partial('_partial/tip.ejs', {tip: page}) %>
+  <%- partial('_partial/tip/show', {tip: page}) %>
 <% } %>
 <% if (page.type === "episode"){  %>
-  <%- partial('_partial/episode', {episode: page}) %>
+  <%- partial('_partial/episode/show', {episode: page}) %>
 <% } %>
 <% if (page.type === "blog"){  %>
-  <%- partial('_partial/blog-post', {post: page, index: false}) %>
+  <%- partial('_partial/blog/show', {post: page, index: false}) %>
 <% } %>

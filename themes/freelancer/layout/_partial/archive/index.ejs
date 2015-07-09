@@ -1,0 +1,29 @@
+<div class="container" style="padding-top:40px">
+  
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-12 postContent article-entry">
+            <% if (is_category()) { %>
+            <h2>All Content for Category: <%= page.tag %></h2>
+            <% } else if (is_tag()) { %>
+            <h2>All Content for Tag: <%= page.tag %></h2>
+            <% } %>
+            
+            <% page.posts.each(function(post){ %>
+              <%- partial('show', {post: post}) %>
+            <% }) %>
+            <% if (page.total > 1){ %>
+              <nav class="page-nav">
+                <%- paginator({
+                  prev_text: '&laquo;',
+                  next_text: '&raquo;'
+                }) %>
+              </nav>
+            <% } %>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->

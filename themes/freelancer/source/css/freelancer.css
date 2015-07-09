@@ -85,7 +85,7 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -109,7 +109,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
+        padding-top: 100px;
         padding-bottom: 100px;
     }
 
@@ -144,7 +144,13 @@ header .intro-text .skills {
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+
 }
+
+.navbar-static-top {
+        padding: 10px 0;
+        margin-bottom:0;
+    }
 
 .navbar {
     text-transform: uppercase;
@@ -180,7 +186,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 section h2 {
@@ -543,7 +549,7 @@ footer .footer-below {
 
 .episode-abstract
 {
-    padding-top:130px;
+    padding-top:40px;
     padding-bottom:30px;
     font-size: 20px;
 }
@@ -569,9 +575,15 @@ footer .footer-below {
   font-size: 16px;
 }
 
+.tag-bar a
+{
+    cursor: pointer;
+}
+
 .tag-bar a:hover
 {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .video-container

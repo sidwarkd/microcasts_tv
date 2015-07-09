@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -25,8 +22,9 @@
   } else if (is_tag()){
     title = 'Tag: ' + page.tag;
   }
+
   %>
-  <title><%= config.title %> <% if (title){ %> | <%= title %><% } %></title>
+  <title><%= config.title %><% if (title){ %> | <%= title %><% } %></title>
 
   <% if (theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">

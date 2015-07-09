@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   
-  <title>µCasts  | MPLABX on Ubuntu: 64-bit Tip</title>
+  <title>µCasts | MPLABX on Ubuntu: 64-bit Tip</title>
 
   
     <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
@@ -26,7 +26,6 @@
   <link href="/css/freelancer.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-
   <!-- Custom Fonts -->
   <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -40,10 +39,9 @@
   <![endif]-->
 
 </head>
-  <body id="page-top" class="index">
-    <!-- Navigation -->
 
-<nav class="navbar navbar-default navbar-fixed-top" >
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -65,12 +63,13 @@
         <li class="page-scroll">
           <a href="/episodes">Episodes</a>
         </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
         <li class="page-scroll">
-          <a href="/reviews">Reviews</a>
-        </li>
-        <li class="page-scroll">
-          <a href="/tips">Tips</a>
-        </li>
+          <a href="#tips">Tips</a>
+        </li>  -->
         <li class="page-scroll">
           <a href="/blog">Blog</a>
         </li>
@@ -95,13 +94,9 @@
             </div>
             <hr/>
             <p>While trying to install MPLABX on my Ubuntu machine I was having issues running the installer. Nothing would happen. After some searching I found that the installer cannot be run in a 64-bit environment without installing some 32-bit dependencies first. To fix simply run:</p>
-<figure class="highlight bash"><pre><span class="line"><span class="built_in">sudo</span> apt-get install libc6:i386</span>
-</pre></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libc6:i386</span><br></pre></td></tr></table></figure>
 <p>This will install the minimal 32-bit libraries. If you are still having issues you can install the full 32-bit library set with:</p>
-<figure class="highlight bash"><pre><span class="line"><span class="built_in">sudo</span> apt-get install ia32-libs</span>
-</pre></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ia32-libs</span><br></pre></td></tr></table></figure>
 <p>Here is the original forum question that led me to the solution.</p>
 <ul>
 <li><a href="http://askubuntu.com/questions/145716/cannot-install-mplab-ide-x-from-the-terminal-silently-exits" target="_blank" rel="external">Cannot install MPLAB IDE X from the terminal - silently exits</a></li>
@@ -189,7 +184,7 @@
         </div>
         <div class="footer-col col-md-4">
           <h3>About Me</h3>
-          <p>Software Guy with an EE Degree. Raspberry Pi, Spark Core, Tessel, Edison, #IoT. Always looking for a chance to make a difference.</p>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
         </div>
       </div>
     </div>
@@ -198,12 +193,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          Copyright &copy; HardlySoftware, LLC 2014
+          Copyright &copy; HardlySoftware, LLC 2015
         </div>
       </div>
     </div>
   </div>
 </footer>
+
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
 
@@ -211,9 +207,6 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/js/classie.js"></script>
-    <script src="/js/cbpAnimatedHeader.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="/js/freelancer.js"></script>

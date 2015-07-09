@@ -1,14 +1,17 @@
-<% if (page.path === "tips/index.html"){  %>
-  <%- partial('_partial/tips-index', {post: page}) %>
-<% } %>
+
 <% if (page.path === "episodes/index.html"){  %>
-  <%- partial('_partial/episode-index', {post: page}) %>
-<% } %>
-<% if (page.path === "reviews/index.html"){  %>
-  <%- partial('_partial/review-index', {post: page}) %>
+  <%- partial('_partial/episode/index', {post: page}) %>
 <% } %>
 <% if (page.path === "blog/index.html"){  %>
-  <%- partial('_partial/blog-index', {post: page}) %>
+  <%- partial('_partial/blog/index', {post: page}) %>
+<% } %>
+
+
+<% if (page.path === "tips/index.html"){  %>
+  <%- partial('_partial/tip/index', {post: page}) %>
+<% } %>
+<% if (page.path === "reviews/index.html"){  %>
+  <%- partial('_partial/review/index', {post: page}) %>
 <% } else { %>
-  <%- partial('_partial/generic_page', {page: page}) %>
+  <%- partial('_partial/generic', {page: page}) %>
 <% } %>

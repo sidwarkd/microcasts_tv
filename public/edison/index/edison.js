@@ -1,4 +1,4 @@
-'use strict';
+
 
 var edison_pins = [
   { 
@@ -453,14 +453,14 @@ var edison_pins = [
 
 var descriptions = {
   gpio: "<h3>GPIO</h3><p>General purpose input/output pins. Can be programmed as an input or output. When programmed as an input a GPIO can serve as an interrupt or wake source and have programmable pullups or pulldowns. The pullup value is configurable as 2, 20, or 50 kOhm. Most GPIO pins are configured as inputs on reset until otherwise configured. When configured as outputs the pins can drive 3mA each.</p>",
-  pwm: "<h3>PWM</h3><p>There are 4 available GPIO pins that can be configured as pulse-width modulated outputs. The PWM resolution is 8 bits. For more information on PWM calculations see page 17 of the <a href='https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-4-27348/edison-module_HG_331189-002.pdf' target='_blank'>Edison Hardware Guide</a></p>",
+  pwm: '<h3>PWM</h3><p>There are 4 available GPIO pins that can be configured as pulse-width modulated outputs. The PWM resolution is 8 bits. For more information on PWM calculations see page 17 of the <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-4-27348/edison-module_HG_331189-002.pdf" ;="" target="_blank">Edison Hardware Guide</a></p>',
   uart1: "<h3>UART1</h3><p>UART1 includes flow control. It is 16550 compliant, has a 64-byte buffer size and supports baud rates between 300bps to 3.686 Mbps.</p>",
   uart2: "<h3>UART2</h3><p>UART2 does <strong>not</strong> support flow control. It is 16550 compliant, has a 64-byte buffer size and supports baud rates between 300bps to 3.686 Mbps.</p>",
   i2c1: "<h3>I2C1</h3><p>I2C1 connects directly to the IA cores. It is open collector.</p><p>The module has the following specs:<ul><li>Standard Mode (data rates up to 100 kbps)</li><li>Fast Mode (data rates up to 400 kbps</li><li>High-speed Mode (data rates up to 3.4 Mbps</li><li>Always I2C master.</li><li>Does not support multi-master</li><li>Supports clock stretching by slave devices</li><li>Supports both 7-bit and 10-bit addressing modes</li></ul></p>",
   i2c6: "<h3>I2C6</h3><p>I2C6 connects directly to the IA cores. It is open collector. It can also be configured as I2C8 but the initial release of the Edison does not support this.</p><p>The module has the following specs:<ul><li>Standard Mode (data rates up to 100 kbps)</li><li>Fast Mode (data rates up to 400 kbps</li><li>High-speed Mode (data rates up to 3.4 Mbps</li><li>Always I2C master.</li><li>Does not support multi-master</li><li>Supports clock stretching by slave devices</li><li>Supports both 7-bit and 10-bit addressing modes</li></ul></p>",
   spi: "<h3>SPI</h3><p>A single SPI interface is available that has two chip select pins available.<ul><li>Supports all 4 SPI modes in single-frame transfer</li><li>Supports SPH=1 and SPO=0 or 1 in multiple frame transfer.</li><li>25 MHz master mode</li><li>16.67 MHz slave mode</li></ul></p>",
   sd: "<h3>SD Interface</h3><p>SD 3.0 compliant interface. <ul><li>Host clock up to 50 MHz</li><li>Card detection with dedicated card detection signal only</li><li>Requires external level shifter for support of 2.85V devices.</li></ul></p>",
-  power: "<h3>Power</h3><p>For a full description of each of the power pins see pages 19-21 in the <a href='https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-4-27348/edison-module_HG_331189-002.pdf' target='_blank'>Edison Hardware Guide</a></p>",
+  power: '<h3>Power</h3><p>For a full description of each of the power pins see pages 19-21 in the <a href="https://communities.intel.com/servlet/JiveServlet/downloadBody/23158-102-4-27348/edison-module_HG_331189-002.pdf" target="_blank">Edison Hardware Guide</a></p>',
   misc: "<h3>Miscellaneous</h3><p>Two of these pins are used for firmware recovery while the other is a system reset output.</p>",
   clock: "<h3>Clocks</h3><p>There are two clock outputs. One is a 32 KHz sleep clock. It has a 5mA drive capability and can provide a clock signal while the Edison is in a sleep state. The other clock is a 19.2 MHz clock and the drive capability is not specified.</p>"
 
