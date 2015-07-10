@@ -195,8 +195,8 @@
     <link href="http://www.microcasts.tv/episodes/2014/10/16/edison-mini-breakout-the-real-getting-started-guide/"/>
     <id>http://www.microcasts.tv/episodes/2014/10/16/edison-mini-breakout-the-real-getting-started-guide/</id>
     <published>2014-10-16T19:45:00.000Z</published>
-    <updated>2015-06-27T03:12:18.000Z</updated>
-    <content type="html"><![CDATA[<h1 style="text-align:center;"><img src="wide_edison_breakout.jpg"></h1>
+    <updated>2015-07-10T03:41:05.000Z</updated>
+    <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="wide_edison_breakout.jpg"></h1>
 
 <p>So I sat down the other night to finally start playing with my <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html" target="_blank" rel="external">Intel Edison</a> board and quickly found out that the documentation for this thing really sucks. There are forums and pages and PDFs spread all over the Intel site and most of the content centers around using the Arduino breakout board. For those of us using the <a href="https://www.sparkfun.com/products/13025" target="_blank" rel="external">mini breakout board</a> we are left to our own resourcefulness to get this thing up and running. There is even incorrect info in the <a href="https://communities.intel.com/docs/DOC-23147" target="_blank" rel="external">Quickstart</a> that might leave beginners scratching their heads. If Intel wants this thing to get widespread community adoption it needs to spend significantly more time making the first experience a better one. </p>
 <p>Until then, here is my version of how to get started with the Edison mini breakout board. This is the guide I wish I had for my first experience.</p>
@@ -205,16 +205,16 @@
 <p><strong>STOP:</strong> Installing a header is completely optional but if you intend to connect your Edison to external hardware at some point I recommend you solder one on now. You can always do it later but the tiny 70 pin Hirose connector makes me nervous so I’d rather not stress it with unnecessary insertions and removals.</p>
 <h3 id="Install_a_Header_(Optional)">Install a Header (Optional)</h3><p>If you intend to connect any external hardware to your Edison you’re going to need access to the GPIO pins. These are located under the Edison itself on the breakout board. </p>
 <p>You can individually solder wires to this but I personally recommend breaking all of the pins out to a header for easy connection. This is really easy to do even for a beginner so don’t be afraid. The pins are standard 0.1” spaced so any <a href="https://www.sparkfun.com/products/116" target="_blank" rel="external">generic male header strip</a> will do. Break the header strip into 14 pin segments and install them side by side on a breadboard as seen below. Make sure the long end of the header strip pins is in the breadboard so the short side is pointing up.</p>
-<h1 style="text-align:center;"><img src="header_guide.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_guide.jpg"></h1>
 
 <p>This will be your jig for soldering. Place the breakout board onto the pins so that the USB connectors are on top. Solding the headers in upside down will definitely ruin your day. The breakout should sit on the pins and feel nice and level. If installed correctly the header pins will just barely protrude from the holes. This ensures that they won’t interfere with seating the Edison later on. If the pins stick out too far then you’ve got your header installed upside down on the breadboard.</p>
-<h1 style="text-align:center;"><img src="header_pre_solder.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_pre_solder.jpg"></h1>
 
 <p>For soldering I highly recommend using a <a href="http://www.alliedelec.com/search/productdetail.aspx?SKU=70177953" target="_blank" rel="external">flux pen</a>. It will help the solder flow into the joints. Take your time soldering and make sure you get a good solder flow on each joint and be careful not to over-apply solder as it will ball up on the pin and not create a good joint. Here is what mine looked like when I was done. You can see that there are a few joints that aren’t as nice as the others but we should be okay. I used some rubbing alcohol and a clean t-shirt rag to clean the flux up after soldering.</p>
-<h1 style="text-align:center;"><img src="header_post_solder.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_post_solder.jpg"></h1>
 
 <h3 id="Insert_the_Edison">Insert the Edison</h3><p>Because of the mounting holes it’s pretty much impossible to install the Edison the wrong way on the breakout board. Just be careful seating it as the 70 pin connector has very tiny contacts that can be damaged if you’re not careful. Get the Edison nice and level over the connector and push straight down on it right about where the sticker is below the metal housing. You should hear a good sounding click.</p>
-<h1 style="text-align:center;"><img src="push_here.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="push_here.jpg"></h1>
 
 <p>Install the two nuts provided to hold the Edison in place.</p>
 <h2 id="Install_Software_and_Drivers">Install Software and Drivers</h2><p>The Quickstart guide provided by Intel has you install the Arduino IDE next. Now even though this isn’t the Arduino breakout you can still write sketches and run them. You just have to break out the appropriate pins yourself. I’m not interested in Arduino functionality so I opted to skip that part but if you want you can <a href="https://communities.intel.com/docs/DOC-23242" target="_blank" rel="external">install that now</a>.</p>
@@ -235,14 +235,14 @@
 <li>7-12V via J21</li>
 <li>Single Cell LiPo battery via J2</li>
 </ul>
-<h1 style="text-align:center;"><img src="power_options.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="power_options.jpg"></h1>
 
 <h2 id="Configuring_Your_Edison">Configuring Your Edison</h2><p>Once you’ve decided on a power strategy for your Edison it’s time to power it up and play with it. By default your Edison comes with <a href="https://www.yoctoproject.org/" target="_blank" rel="external">Yocto Linux</a> installed but you’ll need to configure it. </p>
 <ol>
 <li>Connect the Edison to your PC with the USB cable.</li>
 <li>Apply power. The easiest way to do this is via the second USB port. I didn’t have a free port on my PC so I used a USB battery pack and it worked great.</li>
 <li>Launch Device Manager (Go to Start and search “Device Manager” if you can’t find it)</li>
-<li>In Device Manager expand the <strong>Ports</strong> section and find the entry named <em>USB Serial Port (COM…)</em>. In parenthesis is the COM port your Edison can talk on. On my machine it’s COM4.<br> <img src="com_port.jpg"></li>
+<li>In Device Manager expand the <strong>Ports</strong> section and find the entry named <em>USB Serial Port (COM…)</em>. In parenthesis is the COM port your Edison can talk on. On my machine it’s COM4.<br> <img class="img-responsive" src="com_port.jpg"></li>
 <li>Launch your terminal emulator. These instructions assume you’re using PuTTY.</li>
 <li><p>Set the following options for communication</p>
 <ul>
@@ -250,7 +250,7 @@
 <li>Serial Line: <strong>[The COM value you found in step 4]</strong></li>
 <li>Speed: <strong>115200</strong></li>
 </ul>
-<p><img src="putty_config.jpg"></p>
+<p><img class="img-responsive" src="putty_config.jpg"></p>
 </li>
 <li><p>Click <strong>Open</strong></p>
 <ul>
@@ -275,12 +275,12 @@
 <li>If you’re coming from Raspberry Pi land most of the Linux commands you already know still apply</li>
 </ul>
 <p>If you have any problems or questions feel free to <a href="https://twitter.com/kevinsidwar" target="_blank" rel="external">reach out on Twitter</a>. I’m always happy to help if I can.</p>
-<h1 style="text-align:center;"><img src="finger_edison.jpg"></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="finger_edison.jpg"></h1>
 
 
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 style="text-align:center;"><img src="wide_edison_breakout.jpg" /></h1>
+    <![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="wide_edison_breakout.jpg" /></h1>
 
 <p>So I sat down the other night to finally start playing with my <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html">Intel Edison</a> board and quickly found out that the documentation for this thing really sucks. There are forums and pages and PDFs spread all over the Intel site and most of the content centers around using the Arduino breakout board. For those of us using the <a href="https://www.sparkfun.com/products/13025">mini breakout board</a> we are left to our own resourcefulness to get this thing up and running. There is even incorrect info in the <a href="https://communities.intel.com/docs/DOC-23147">Quickstart</a> that might leave beginners scratching their heads. If Intel wants this thing to get widespread community adoption it needs to spend significantly more time making the first experience a better one. </p>
 <p>Until then, here is my version of how to get started with the Edison mini breakout board. This is the guide I wish I had for my first experience.</p>]]>

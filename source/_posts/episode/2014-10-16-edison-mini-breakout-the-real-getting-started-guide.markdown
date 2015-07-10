@@ -15,7 +15,7 @@ tags: [Edison, NodeJS]
 comments: true
 ---
 
-<h1 style="text-align:center;"><img src="wide_edison_breakout.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="wide_edison_breakout.jpg" /></h1>
 
 So I sat down the other night to finally start playing with my [Intel Edison][edison] board and quickly found out that the documentation for this thing really sucks. There are forums and pages and PDFs spread all over the Intel site and most of the content centers around using the Arduino breakout board. For those of us using the [mini breakout board][mini_board] we are left to our own resourcefulness to get this thing up and running. There is even incorrect info in the [Quickstart][quickstart] that might leave beginners scratching their heads. If Intel wants this thing to get widespread community adoption it needs to spend significantly more time making the first experience a better one. 
 
@@ -33,20 +33,20 @@ If you intend to connect any external hardware to your Edison you're going to ne
 
 You can individually solder wires to this but I personally recommend breaking all of the pins out to a header for easy connection. This is really easy to do even for a beginner so don't be afraid. The pins are standard 0.1" spaced so any [generic male header strip][header] will do. Break the header strip into 14 pin segments and install them side by side on a breadboard as seen below. Make sure the long end of the header strip pins is in the breadboard so the short side is pointing up.
 
-<h1 style="text-align:center;"><img src="header_guide.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_guide.jpg" /></h1>
 
 This will be your jig for soldering. Place the breakout board onto the pins so that the USB connectors are on top. Solding the headers in upside down will definitely ruin your day. The breakout should sit on the pins and feel nice and level. If installed correctly the header pins will just barely protrude from the holes. This ensures that they won't interfere with seating the Edison later on. If the pins stick out too far then you've got your header installed upside down on the breadboard.
 
-<h1 style="text-align:center;"><img src="header_pre_solder.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_pre_solder.jpg" /></h1>
 
 For soldering I highly recommend using a [flux pen][flux_pen]. It will help the solder flow into the joints. Take your time soldering and make sure you get a good solder flow on each joint and be careful not to over-apply solder as it will ball up on the pin and not create a good joint. Here is what mine looked like when I was done. You can see that there are a few joints that aren't as nice as the others but we should be okay. I used some rubbing alcohol and a clean t-shirt rag to clean the flux up after soldering.
 
-<h1 style="text-align:center;"><img src="header_post_solder.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="header_post_solder.jpg" /></h1>
 
 ### Insert the Edison
 Because of the mounting holes it's pretty much impossible to install the Edison the wrong way on the breakout board. Just be careful seating it as the 70 pin connector has very tiny contacts that can be damaged if you're not careful. Get the Edison nice and level over the connector and push straight down on it right about where the sticker is below the metal housing. You should hear a good sounding click.
 
-<h1 style="text-align:center;"><img src="push_here.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="push_here.jpg" /></h1>
 
 Install the two nuts provided to hold the Edison in place.
 
@@ -73,7 +73,7 @@ This one stumped me a little at first. There are two USB ports on the mini break
   * 7-12V via J21
   * Single Cell LiPo battery via J2
 
-<h1 style="text-align:center;"><img src="power_options.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="power_options.jpg" /></h1>
 
 ## Configuring Your Edison
 Once you've decided on a power strategy for your Edison it's time to power it up and play with it. By default your Edison comes with [Yocto Linux][yocto] installed but you'll need to configure it. 
@@ -82,14 +82,14 @@ Once you've decided on a power strategy for your Edison it's time to power it up
   2. Apply power. The easiest way to do this is via the second USB port. I didn't have a free port on my PC so I used a USB battery pack and it worked great.
   3. Launch Device Manager (Go to Start and search "Device Manager" if you can't find it)
   4. In Device Manager expand the **Ports** section and find the entry named *USB Serial Port (COM...)*. In parenthesis is the COM port your Edison can talk on. On my machine it's COM4.
-  	<img src="com_port.jpg" />
+  	<img class="img-responsive" src="com_port.jpg" />
   5. Launch your terminal emulator. These instructions assume you're using PuTTY.
   6. Set the following options for communication
     * Connection Type: **Serial**
     * Serial Line: **[The COM value you found in step 4]**
     * Speed: **115200**
     
-    <img src="putty_config.jpg" />
+    <img class="img-responsive" src="putty_config.jpg" />
   7. Click **Open**
     * **NOTE: You are now about to start experiencing a super annoying defect in the Edison UART. This is what the datasheet says:**
 
@@ -114,7 +114,7 @@ A few things of note:
 
 If you have any problems or questions feel free to [reach out on Twitter][twitter]. I'm always happy to help if I can.
 
-<h1 style="text-align:center;"><img src="finger_edison.jpg" /></h1>
+<h1 style="text-align:center;"><img class="img-responsive" src="finger_edison.jpg" /></h1>
 
 
 [edison]: http://www.intel.com/content/www/us/en/do-it-yourself/edison.html
