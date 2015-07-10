@@ -526,6 +526,10 @@ footer .footer-below {
     color: #2c3e50;
 }
 
+.postContent > p{
+    font-size: 16px;
+}
+
 .postContent > h1 {
     font-weight: 700;
     font-style: normal;
@@ -559,9 +563,11 @@ footer .footer-below {
     font-size: 20px;
 }
 
-.episode-abstract ul
+.episode-abstract ol,
+.episode-abstract ul,
+.episode-abstract p
 {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .episode-abstract h1,h2,h3,h4,h5,h6
@@ -569,7 +575,7 @@ footer .footer-below {
     text-transform: none;
 }
 
-.episode-abstract img
+.episode-abstract > img
 {
     max-width: 100%;
 }
