@@ -89,17 +89,13 @@
 
         <!-- Blog Content Column -->
         <div class="col-md-8 postContent article-entry">
-            
-  <h2>
-    <a href="/blog/2014/01/27/running-python-scripts-from-dropbox-on-raspberry-pi/">Running Python Scripts from Dropbox on the Raspberry Pi</a>
-  </h2>
-
+            <h1>Running Python Scripts from Dropbox on the Raspberry Pi</h1>
             <p class="lead">
-              by Kevin
+              <!-- <span class="glyphicon glyphicon-user"></span>  Kevin Sidwar &nbsp; &nbsp; -->
+              <span class="glyphicon glyphicon-time"></span>  
+  <time datetime="2014-01-28T05:59:00.000Z" itemprop="datePublished">Jan 27, 2014</time>
+
             </p>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on 
-  <time datetime="2014-01-28T05:59:00.000Z" itemprop="datePublished">Jan 27, 2014 at 22:59 </time>
-</p>
             <hr>
             <p>If you’ve ever tried writing code on your Raspberry Pi from just the plain terminal window then you’ve probably used Nano or Vim. If you’re like me you wished you could have used your favorite IDE or text editor on another machine. When I develop for the Raspberry Pi my normal use case is to SSH in and write code via Nano. While this works just fine I’d prefer to have the bigger real estate afforded by my desktop monitors.</p>
 <h3 id="What_is_preheat">What is <strong>preheat</strong></h3><p><strong>preheat</strong> is my solution to this problem. It allows me to pull scripts down from my Dropbox account at execution time. When I finally decided I didn’t want to code directly on the Pi anymore the very first thing that came to my mind was to install <a href="http://dropbox.com" target="_blank" rel="external">Dropbox</a> on the Pi and just have it sync with a folder on my dev machine. It only took a few searches to realize that a Dropbox client for the Pi doesn’t exist. So I found a few other solutions like <a href="http://en.wikipedia.org/wiki/Rsync" target="_blank" rel="external">rsync</a>, <a href="http://owncloud.org" target="_blank" rel="external">ownCloud</a> and others but everything I found was either too much work or just plain overkill for what I needed. So <strong>preheat</strong> was born.</p>
