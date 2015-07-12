@@ -214,6 +214,10 @@ section.success {
     margin: 0 0 15px;
 }
 
+.episode-item a:hover{
+    text-decoration: none;
+}
+
 .episodes .episode-item .episode-link {
     display: block;
     position: relative;

@@ -1,10 +1,12 @@
 <div class="col-sm-4 episode-item">
-  <a href="<%- url_for(episode.path) %>" class="episode-link">
-    <div class="thumbnail">
+  <a href="<%- url_for(episode.path) %>"><div class="panel panel-info">
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="height:60px; text-align:center; font-size:18px;"><%= episode.title %></div>
+    <div class="panel-body">
       <img src="<%= '/' + episode.path + episode.image %>" class="img-responsive" alt="">
-      <div class="caption">
-        <a href="<%- url_for(episode.path) %>"><p style="text-align:center"><%= episode.title %></p></a>
-      </div>
+      <% episode.tags.each(function(tag){ %>
+        <span class="label label-danger" style="float:right; margin-left:4px; top:5px; position:relative;"><%= tag.name %></span>
+      <% }) %>
     </div>
-  </a>
+  </div></a>
 </div>
