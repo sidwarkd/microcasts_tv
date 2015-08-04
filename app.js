@@ -25,12 +25,7 @@ app.use(cookieParser());
 // Serve up most of the site via hexo generated pages
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(stormpath.init(app, {
-  apiKeyFile: "../../.stormpath/apiKey.properties",
-  application: "https://api.stormpath.com/v1/applications/zdSxYsxjJ3nyIXkX3ba3e"
-}));
-
-app.use('/api', apiRoutes);
+//app.use('/api', apiRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
