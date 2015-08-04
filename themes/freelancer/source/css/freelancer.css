@@ -586,6 +586,7 @@ footer .footer-below {
 .episode-abstract img
 {
     max-width: 100%;
+    margin: 30px 0px;
 }
 
 .tag-bar > .label

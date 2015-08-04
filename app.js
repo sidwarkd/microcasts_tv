@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var stormpath = require('express-stormpath');
+
+
 var apiRoutes = require('./routes/index');
 
 var app = express();
@@ -21,6 +24,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 // Serve up most of the site via hexo generated pages
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(stormpath.init(app, {
+  apiKeyFile: "../../.stormpath/apiKey.properties",
+  application: "https://api.stormpath.com/v1/applications/zdSxYsxjJ3nyIXkX3ba3e"
+}));
 
 app.use('/api', apiRoutes);
 

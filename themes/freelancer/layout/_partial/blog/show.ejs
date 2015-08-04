@@ -2,12 +2,17 @@
     <div class="row">
 
         <!-- Blog Content Column -->
-        <div class="col-md-8 postContent article-entry">
+        <div class="col-md-8 episode-abstract">
             <h1><%= post.title %></h1>
             <p class="meta text-muted">
               <!-- <span class="glyphicon glyphicon-user"></span>  <%= post.author || config.author %> &nbsp; &nbsp; -->
               <span class="glyphicon glyphicon-time"></span>  <%- partial('date', { date_format: null, time_format: null}) %>
             </p>
+            <div class="tag-bar">
+              <% post.tags.each(function(tag){ %>
+                <a href="<%- url_for(tag.path) %>"><span class="label label-info"><%= tag.name %></span></a>
+              <% }) %>
+            </div>
             <hr>
             <%- post.content %>
         </div>

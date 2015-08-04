@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.microcasts.tv//"/>
-  <updated>2015-06-27T03:12:18.000Z</updated>
+  <updated>2015-08-04T06:48:25.000Z</updated>
   <id>http://www.microcasts.tv//</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Exploding Kittens Teardown]]></title>
+    <link href="http://www.microcasts.tv/blog/2015/08/02/Exploding-Kittens-Teardown/"/>
+    <id>http://www.microcasts.tv/blog/2015/08/02/Exploding-Kittens-Teardown/</id>
+    <published>2015-08-02T06:30:53.000Z</published>
+    <updated>2015-08-04T06:48:25.000Z</updated>
+    <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_box.jpg" alt="Exploding Kittens Box"></h1>
+
+<p>Chances are you’ve heard of the <a href="https://www.kickstarter.com/projects/elanlee/exploding-kittens" target="_blank" rel="external">most-backed game in Kickstarter history</a>. If not, stop here, and go check out <a href="http://explodingkittens.com/" target="_blank" rel="external">Exploding Kittens</a> for a minute and then come back. After months of anticipation my copy of the game showed up last week.</p>
+<p><strong>Spoiler Alert:  I’m about to reveal what the surprise is inside the Exploding Kittens box. If you don’t want that ruined stop here and come back after you’ve personally experienced it.</strong></p>
+<a id="more"></a>
+<p><iframe src="https://vine.co/v/eHDjiYnwxKl/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+<p>After repeating this process no less than 15 times for the kids I figured that some people might be interested in knowing exactly how the surprise works. It’s actually a pretty genius piece of electronics. Hence this “teardown” post to uncover the magic.</p>
+<p>Playing a noise or sound when you open something isn’t exactly mind-blowing technology. In fact, you’ve probably received one of those fancy birthday cards that sing to you when you open it. But how does the box know you’ve opened it? It’s actually quite simple. Let’s take a look.</p>
+<p><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_lid.jpg" alt="Exploding Kittens Inside Lid"></p>
+<p>This is what the inside lid of the game looks like. The illustrations inside and out are amazing but if you look closely at the taco cat on the right you’ll notice he has a wonky eye. Upon closer inspection you’ll see that his left eye is a photoresistor.</p>
+<p><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_eye.jpg" alt="Photoresistor Eye"></p>
+<p>A <a href="https://en.wikipedia.org/wiki/Photoresistor" target="_blank" rel="external">photoresistor</a> is just a variable resistor kind of like a <a href="https://en.wikipedia.org/wiki/Potentiometer" target="_blank" rel="external">potentiometer</a> but instead of turning a knob or screw, the resistance varies by how much light it is exposed to. Pretty cool. When it’s really dark the photoresistor will have a very high resistance while in the light it will have a low resistance. </p>
+<p><iframe src="https://vine.co/v/eHDdbeBwxgq/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+<p>So how do we use that to tell if the box is open? Well, let’s take a look at the rest of the goods. As it turns out we can open the compartment on the right side of the lid and pull out a plastic tray that contains all of the hardware.</p>
+<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_pcb.png" alt="Exploding Kittens PCB"></h1>
+
+<p>There really isn’t a lot going on. So the main components here are power (3 coin batteries), a microcontroller (concealed by the black epoxy blob), a photoresistor (light sensor) and the speaker. The idea is that the box will be almost perfectly dark when closed causing a high resistance across the photoresistor. When you open the box the light floods in and causes the resistance to drop. The microcontroller detects that change and proceeds to play the cat sound. But how does a microcontroller detect a change in resistance? Well it doesn’t exactly. It uses one of the most basic circuits in electronics, the <a href="https://en.wikipedia.org/wiki/Voltage_divider" target="_blank" rel="external">voltage divider</a>.</p>
+<p><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/voltage_divider.png" alt="Voltage Divider"></p>
+<p>The basic concept here is that when two resistors are connected together like this they produce an output voltage Vout that is a fraction of the input voltage Vin. That output value can be precisely controlled by the values you pick for resistors Z1 and Z2. Check out the Wikipedia link for more info on how that calculation works. In our Exploding Kittens circuit, one of the resistors is fixed. It’s the tiny surface mount one labeled R1. The other resistor is our photoresistor which changes based on the amount of light it is exposed to. If we look at our voltage divider circuit above you can see that Vout is a point between Z1 and Z2. If you look closely at the circuit board you can see that a trace on the printed circuit board goes from the right pin of the photoresistor up to the epoxy blob where it connects to the microcontroller underneath. So what it’s actually sending to the microcontroller is a voltage that varies based on how light or dark it is. From there the microcontroller uses what’s called an <a href="https://en.wikipedia.org/wiki/Analog-to-digital_converter" target="_blank" rel="external">Analog to Digital Converter</a> or ADC to sample that voltage and turn it into a digital value. That digital value can then be used to tell if the box is open or closed. Pretty neat.</p>
+<h3 id="But_Wait,_There’s_More">But Wait, There’s More</h3><p>If you look closely at the board you will notice two silver pads at 7 and 8 o’clock on the epoxy blob. They are labeled <em>SDA</em> and <em>SCL</em>. Those are the common names of communication lines in the <a href="https://en.wikipedia.org/wiki/I%C2%B2C" target="_blank" rel="external">I2C</a> communication protocol. SDA is the data line and SCL is the clock line for timing communication on the data line. What are those for? My guess is that they are there for debug/testing purposes. If I had more time I’d hook some wires up to it and use the i2c-tools on the Raspberry Pi to see what address it has and possibly query it for data. It may even be possible to modify the data that produces the meow sound or it might just be a way to verify that the photoresistor is working correctly in a test harness.</p>
+<h3 id="Wrap_Up">Wrap Up</h3><p>I think the box opening surprise was a slick addition to an already very polished deliverable. And even though this is just a very simple circuit design there were quite a few topics involved including:</p>
+<ul>
+<li>Photoresistors</li>
+<li>Resistance</li>
+<li>Voltage Dividers</li>
+<li>Microcontrollers</li>
+<li>I2C Communication Protocol</li>
+<li>Analog to Digital Converters</li>
+</ul>
+<p>So the next time you bust out Exploding Kittens and open the box you’ll know exactly what’s going on.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_box.jpg" alt="Exploding Kittens Box" /></h1>
+
+<p>Chances are you’ve heard of the <a href="https://www.kickstarter.com/projects/elanlee/exploding-kittens">most-backed game in Kickstarter history</a>. If not, stop here, and go check out <a href="http://explodingkittens.com/">Exploding Kittens</a> for a minute and then come back. After months of anticipation my copy of the game showed up last week.</p>
+<p><strong>Spoiler Alert:  I’m about to reveal what the surprise is inside the Exploding Kittens box. If you don’t want that ruined stop here and come back after you’ve personally experienced it.</strong></p>]]>
+    
+    </summary>
+    
+      <category term="Sensors" scheme="http://www.microcasts.tv/tags/Sensors/"/>
+    
+      <category term="Teardown" scheme="http://www.microcasts.tv/tags/Teardown/"/>
+    
+      <category term="blog" scheme="http://www.microcasts.tv/categories/blog/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Control your Pi with BLE]]></title>
@@ -694,24 +747,6 @@
       <category term="RaspberryPi" scheme="http://www.microcasts.tv/tags/RaspberryPi/"/>
     
       <category term="episodes" scheme="http://www.microcasts.tv/categories/episodes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Fixing Tight Breadboards]]></title>
-    <link href="http://www.microcasts.tv/tips/2014/03/12/fixing-tight-breadboards/"/>
-    <id>http://www.microcasts.tv/tips/2014/03/12/fixing-tight-breadboards/</id>
-    <published>2014-03-13T05:33:00.000Z</published>
-    <updated>2015-06-27T03:12:18.000Z</updated>
-    <content type="html"><![CDATA[<p>Have you ever bought a breadboard that had extremely tight connection terminals? The kind that you can’t connect anything to because everything just bends. I get that breadboards need to securely hold things but not being able to easily insert a resistor or capacitor is just ridiculous.</p>
-<p>My suggestion is the find a breadboard the is as smooth as butter to connect to and never stray from it. Surprisingly enough, I find Radio Shack breadboards to have very nice connection terminals that require no break-in.</p>
-<h3 id="How_to_Fix_It">How to Fix It</h3><p>If you do have a breadboard that has overly tight terminals there is an easy way to fix it although it does take a little time. Simply grab a pair of pliers and a length of male header (4 to 5 pins long). Grab the short side of the header pins firmly with the pliers and then push the header pins into the terminals. With a length of 5 pins you can handle an entire vertical row at a time. That’s all there is to it. After doing this your components should slide easily and securely into your breadboard. Here’s a vine showing the process.</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Have you ever bought a breadboard that had extremely tight connection terminals? The kind that you can’t connect anything to because ever]]>
-    </summary>
-    
-      <category term="tips" scheme="http://www.microcasts.tv/categories/tips/"/>
     
   </entry>
   
