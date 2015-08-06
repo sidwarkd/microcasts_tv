@@ -9,11 +9,12 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
+    line-height:20px;
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 a,
@@ -525,8 +526,8 @@ footer .footer-below {
     color: #444;*/
 
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    line-height: 1.42857143;
+    font-size: 15px;
+    line-height: 20px;
     color: #2c3e50;
 }
 
@@ -535,7 +536,7 @@ footer .footer-below {
 .postContent ul
 {
 
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .postContent > h1 {
@@ -568,14 +569,15 @@ footer .footer-below {
 {
     padding-top:40px;
     padding-bottom:30px;
-    font-size: 20px;
+    font-size: 15px;
+    line-height: 20px;
 }
 
 .episode-abstract ol,
 .episode-abstract ul,
 .episode-abstract p
 {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .episode-abstract h1,h2,h3,h4,h5,h6
