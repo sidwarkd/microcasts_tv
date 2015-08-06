@@ -21,6 +21,10 @@ About a year ago I came across [a Raspberry Pi case made from a manila folder][m
 The Tessel 2 case wasn't really that hard to throw together. I basically took the Raspberry Pi case design and modified the dimensions and cutouts. A digital caliper and a few hours of trial and error was all it took to get everything just right. So if you're interested in getting a case all ready for that special day when your Tessel 2 arrives here are the instructions.
 
 ### 1. Download It, Print It, Cut It
+
+  *  <a href="{%asset_path Tessel2_Case.dwg %}">DWG Design File</a>
+  *  <a href="{%asset_path Tessel2_Case.pdf %}">PDF Version</a>
+
 You have a couple of options here. The `.dwg` file should open in pretty much any CAD application (I used [DraftSight][draftsight]) and is great if you want to modify the design a bit or adapt it to another project. For everyone else I'd recommend just downloading the PDF version. The case is to scale but you have to print it that way so **make sure any autoscaling is turned off** or else the dimensions won't be quite right. The bottom portion of the case printout should be exactly 60mm wide if you want to check it with a ruler.
 
 Once you've printed out the plan it's time to cut it out. Take your time on this part. The folding dimensions are pretty exact and since you'll be transferring it in the next step you want this master template to be as accurate as possible.
