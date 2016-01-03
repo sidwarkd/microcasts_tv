@@ -25,7 +25,7 @@ There are multiple power options when working with the Omega but there are some 
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
 ## 4. You Can Rename It
-When you first set up the Omega you'll probably connect to it's access point which is named something like OMEGA-1ACD which means to access it via the browser you'll use something like http://omega-1acd.local/ which is fine but can be hard to remember. Just rename it by going into the *General Settings* tab in the **Settings** app.
+When you first set up the Omega it'll have a name like OMEGA-1ACD which means to access it via the browser after setting it up you'll use something like http://omega-1acd.local/ which is fine but can be hard to remember. Just rename it by going into the *General Settings* tab in the **Settings** app.
 
 ## 5. It Isn't All There....Yet
 I personally bought the Omega because it promised NodeJS support but quickly found out that it's still not there. There are some posts in the forums where people have gotten NodeJS to run but it's a very old version and there is no available documentation on how you'd use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. 
