@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <title>µCasts | 5 Things To Know About The Onion Omega</title>
+
+  
+    <link rel="alternative" href="/atom.xml" title="µCasts" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/freelancer.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!-- Custom Fonts -->
+  <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-static-top" >
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/img/uCasts.png" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="/episodes">Episodes</a>
+        </li>
+        
+        <!-- <li class="page-scroll">
+          <a href="#">Reviews</a>
+        </li> 
+        <li class="page-scroll">
+          <a href="#tips">Tips</a>
+        </li>  -->
+        <li class="page-scroll">
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+    
+
+
+
+  <div class="container" style="padding-top:40px; padding-bottom:30px;">
+    <div class="row">
+
+        <!-- Blog Content Column -->
+        <div class="col-md-12 episode-abstract">
+            <h1>5 Things To Know About The Onion Omega</h1>
+            <p class="meta text-muted">
+              <!-- <span class="glyphicon glyphicon-user"></span>  Kevin Sidwar &nbsp; &nbsp; -->
+              <span class="glyphicon glyphicon-time"></span>  
+  <time datetime="2016-01-03T08:31:12.000Z" itemprop="datePublished">Jan 3, 2016</time>
+
+            </p>
+            <div class="tag-bar">
+              
+                <a href="/tags/Onion-Omega/"><span class="label label-info">Onion Omega</span></a>
+              
+                <a href="/tags/OpenWrt/"><span class="label label-info">OpenWrt</span></a>
+              
+                <a href="/tags/Platform/"><span class="label label-info">Platform</span></a>
+              
+            </div>
+            <hr>
+            <h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints"></h1>
+
+<p>The <a href="https://onion.io/omega" target="_blank" rel="external">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>
+<a id="more"></a>
+<h2 id="1-_It’s_OpenWrt_Under_the_Hood">1. It’s OpenWrt Under the Hood</h2><p>This isn’t a magical secret but it can definitely be helpful if you’re trying to figure out how to do something not covered in the documentation. The docs on the Omega are still very scarce so if you’re trying to do something beyond getting started you probably won’t find it there. The docs and info on <a href="https://openwrt.org/" target="_blank" rel="external">OpenWrt</a> are aplenty so you’re much more likely to find help if you seek it out in those forums. Google is your friend on this one.</p>
+<h2 id="2-_The_Pins_Aren’t_-1”_Spaced">2. The Pins Aren’t .1” Spaced</h2><p>Again, not something that’s hidden but it’s also not super apparent if you are shopping on the website especially if you are a beginner. It’s important to know because that means you can’t just connect it to a breadboard and start prototyping with it. You will definitely need one of the available docks from their website. I recommend the Expansion Dock to get started.</p>
+<h2 id="3-_It_Will_Run_on_AA_Batteries">3. It Will Run on AA Batteries</h2><p>There are multiple power options when working with the Omega but there are some things you need to be aware of so you don’t fry it. First of all the operating voltage of the Omega itself is 3.3V so it is NOT 5V tolerant. If you have a Battery Dock you can hook up a 1s LiPo as there is an onboard voltage regulator. The Expansion dock is a little different though. You can power the Omega via the micro USB port however a LiPo won’t work in this scenario. If you connect it to the 3.3V breakout pins you’ll potentially supply up to 4.2V on a full charge which could damage the Omega. That doesn’t mean you’re out of luck for battery power though. Two AA or AAA batteries supply 3V which I confirmed is sufficient to operate the Omega. You just connect the leads up to the 3.3V and GND pins that are on the header like this.</p>
+<p><blockquote class="instagram-media" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/-0YIEfg3Yf/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A video posted by Kevin Sidwar (@sidwarkd)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-03T05:44:47+00:00">Dec 2, 2015 at 9:44pm PST</time></p></div></blockquote></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<h2 id="4-_You_Can_Rename_It">4. You Can Rename It</h2><p>When you first set up the Omega you’ll probably connect to it’s access point which is named something like OMEGA-1ACD which means to access it via the browser you’ll use something like <a href="http://omega-1acd.local/" target="_blank" rel="external">http://omega-1acd.local/</a> which is fine but can be hard to remember. Just rename it by going into the <em>General Settings</em> tab in the <strong>Settings</strong> app.</p>
+<h2 id="5-_It_Isn’t_All_There…-Yet">5. It Isn’t All There….Yet</h2><p>I personally bought the Omega because it promised NodeJS support but quickly found out that it’s still not there. There are some posts in the forums where people have gotten NodeJS to run but it’s a very old version and there is no available documentation on how you’d use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. </p>
+<p>From what I’ve seen so far I have no reason to suspect that the team won’t deliver on its promises and they are very active in the community forums. Just know that it’s not quite everything it’s billed to be on the marketing pages yet but appears to be getting there fast.</p>
+<h2 id="Questions">Questions</h2><p>Have any questions about the Omega? I’d love to try to answer them for you and am feverishly trying to put together some µCasts to help you get started with it. Ask below in the comments and I’ll see if I can dig up the answer for you.</p>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-md-8">
+            
+                <section id="comments">
+                    <div id="disqus_thread">
+                      <script type="text/javascript">
+                          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                          var disqus_shortname = 'ucastblog'; // required: replace example with your forum shortname
+
+                          /* * * DON'T EDIT BELOW THIS LINE * * */
+                          (function() {
+                              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                      </script>
+                      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </div>
+                </section>
+            
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+
+    <!-- Footer -->
+<footer class="text-center">
+  <div class="footer-above">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+          <h3>What's With the &micro;</h3>
+          <p>It's a prefix (pronounced 'micro') in the metric system meaning one millionth. I want to provide micro-sized content to help you hack.</p>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>Find Me on the Web</h3>
+          <ul class="list-inline">
+            <li>
+              <a href="https://twitter.com/KevinSidwar" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/sidwarkd" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/microcasts" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-youtube-play"></i></a>
+            </li>
+            <li>
+              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-rss"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col col-md-4">
+          <h3>About Me</h3>
+          <p>Software Guy with an EE Degree. I'm obsessed with the Internet of Things and love teaching people about it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-below">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          Copyright &copy; HardlySoftware, LLC 2015
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/freelancer.js"></script>
+
+  </body>
+</html>

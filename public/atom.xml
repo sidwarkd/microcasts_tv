@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.microcasts.tv//"/>
-  <updated>2015-08-06T07:04:04.000Z</updated>
+  <updated>2016-01-03T08:48:06.000Z</updated>
   <id>http://www.microcasts.tv//</id>
   
   <author>
@@ -16,10 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[5 Things To Know About The Onion Omega]]></title>
+    <link href="http://www.microcasts.tv/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/"/>
+    <id>http://www.microcasts.tv/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/</id>
+    <published>2016-01-03T08:31:12.000Z</published>
+    <updated>2016-01-03T08:48:06.000Z</updated>
+    <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints"></h1>
+
+<p>The <a href="https://onion.io/omega" target="_blank" rel="external">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>
+<a id="more"></a>
+<h2 id="1-_It’s_OpenWrt_Under_the_Hood">1. It’s OpenWrt Under the Hood</h2><p>This isn’t a magical secret but it can definitely be helpful if you’re trying to figure out how to do something not covered in the documentation. The docs on the Omega are still very scarce so if you’re trying to do something beyond getting started you probably won’t find it there. The docs and info on <a href="https://openwrt.org/" target="_blank" rel="external">OpenWrt</a> are aplenty so you’re much more likely to find help if you seek it out in those forums. Google is your friend on this one.</p>
+<h2 id="2-_The_Pins_Aren’t_-1”_Spaced">2. The Pins Aren’t .1” Spaced</h2><p>Again, not something that’s hidden but it’s also not super apparent if you are shopping on the website especially if you are a beginner. It’s important to know because that means you can’t just connect it to a breadboard and start prototyping with it. You will definitely need one of the available docks from their website. I recommend the Expansion Dock to get started.</p>
+<h2 id="3-_It_Will_Run_on_AA_Batteries">3. It Will Run on AA Batteries</h2><p>There are multiple power options when working with the Omega but there are some things you need to be aware of so you don’t fry it. First of all the operating voltage of the Omega itself is 3.3V so it is NOT 5V tolerant. If you have a Battery Dock you can hook up a 1s LiPo as there is an onboard voltage regulator. The Expansion dock is a little different though. You can power the Omega via the micro USB port however a LiPo won’t work in this scenario. If you connect it to the 3.3V breakout pins you’ll potentially supply up to 4.2V on a full charge which could damage the Omega. That doesn’t mean you’re out of luck for battery power though. Two AA or AAA batteries supply 3V which I confirmed is sufficient to operate the Omega. You just connect the leads up to the 3.3V and GND pins that are on the header like this.</p>
+<p><blockquote class="instagram-media" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/-0YIEfg3Yf/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A video posted by Kevin Sidwar (@sidwarkd)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-12-03T05:44:47+00:00">Dec 2, 2015 at 9:44pm PST</time></p></div></blockquote></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<h2 id="4-_You_Can_Rename_It">4. You Can Rename It</h2><p>When you first set up the Omega you’ll probably connect to it’s access point which is named something like OMEGA-1ACD which means to access it via the browser you’ll use something like <a href="http://omega-1acd.local/" target="_blank" rel="external">http://omega-1acd.local/</a> which is fine but can be hard to remember. Just rename it by going into the <em>General Settings</em> tab in the <strong>Settings</strong> app.</p>
+<h2 id="5-_It_Isn’t_All_There…-Yet">5. It Isn’t All There….Yet</h2><p>I personally bought the Omega because it promised NodeJS support but quickly found out that it’s still not there. There are some posts in the forums where people have gotten NodeJS to run but it’s a very old version and there is no available documentation on how you’d use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. </p>
+<p>From what I’ve seen so far I have no reason to suspect that the team won’t deliver on its promises and they are very active in the community forums. Just know that it’s not quite everything it’s billed to be on the marketing pages yet but appears to be getting there fast.</p>
+<h2 id="Questions">Questions</h2><p>Have any questions about the Omega? I’d love to try to answer them for you and am feverishly trying to put together some µCasts to help you get started with it. Ask below in the comments and I’ll see if I can dig up the answer for you.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints" /></h1>
+
+<p>The <a href="https://onion.io/omega">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>]]>
+    
+    </summary>
+    
+      <category term="Onion Omega" scheme="http://www.microcasts.tv/tags/Onion-Omega/"/>
+    
+      <category term="OpenWrt" scheme="http://www.microcasts.tv/tags/OpenWrt/"/>
+    
+      <category term="Platform" scheme="http://www.microcasts.tv/tags/Platform/"/>
+    
+      <category term="blog" scheme="http://www.microcasts.tv/categories/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Tessel 2 Cereal Box Case]]></title>
     <link href="http://www.microcasts.tv/blog/2015/08/05/Tessel-2-Cereal-Box-Case/"/>
     <id>http://www.microcasts.tv/blog/2015/08/05/Tessel-2-Cereal-Box-Case/</id>
-    <published>2015-08-05T20:00:39.000Z</published>
+    <published>2015-08-05T21:00:39.000Z</published>
     <updated>2015-08-06T07:04:04.000Z</updated>
     <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2015/08/05/Tessel-2-Cereal-Box-Case/fp_case.jpg" alt="Finished case on the Tessel"></h1>
 
@@ -68,7 +106,7 @@
     <title><![CDATA[Exploding Kittens Teardown]]></title>
     <link href="http://www.microcasts.tv/blog/2015/08/02/Exploding-Kittens-Teardown/"/>
     <id>http://www.microcasts.tv/blog/2015/08/02/Exploding-Kittens-Teardown/</id>
-    <published>2015-08-02T06:30:53.000Z</published>
+    <published>2015-08-02T07:30:53.000Z</published>
     <updated>2015-08-04T06:48:25.000Z</updated>
     <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2015/08/02/Exploding-Kittens-Teardown/exploding_kittens_box.jpg" alt="Exploding Kittens Box"></h1>
 
@@ -121,7 +159,7 @@
     <title><![CDATA[Control your Pi with BLE]]></title>
     <link href="http://www.microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/"/>
     <id>http://www.microcasts.tv/episodes/2015/02/04/control-your-pi-with-BLE/</id>
-    <published>2015-02-05T04:04:23.000Z</published>
+    <published>2015-02-05T05:04:23.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>This Episode was made specially for <a href="https://twitter.com/TimPietrusky" target="_blank" rel="external">Tim Pietrusky</a>. I asked the Twitterverse if anybody had a question that I could answer in video form and Tim sent this:</p>
 <p><blockquote class="twitter-tweet" data-partner="tweetdeck"><p><a href="https://twitter.com/KevinSidwar" target="_blank" rel="external">@KevinSidwar</a> How can I control an USB <a href="https://twitter.com/hashtag/bluetooth?src=hash" target="_blank" rel="external">#bluetooth</a> adapter via <a href="https://twitter.com/nodejs" target="_blank" rel="external">@nodejs</a> on a <a href="https://twitter.com/Raspberry_Pi" target="_blank" rel="external">@Raspberry_Pi</a> to send data from my smartphone to the Pi?</p>&mdash; Tim Pietrusky (@TimPietrusky) <a href="https://twitter.com/TimPietrusky/status/563131851368566784" target="_blank" rel="external">February 5, 2015</a></blockquote></p>
@@ -146,7 +184,7 @@
     <title><![CDATA[Restoring the Edison Drive in Windows Explorer]]></title>
     <link href="http://www.microcasts.tv/tips/2015/01/26/restoring-edison-drive-in-windows-explorer/"/>
     <id>http://www.microcasts.tv/tips/2015/01/26/restoring-edison-drive-in-windows-explorer/</id>
-    <published>2015-01-26T19:21:41.000Z</published>
+    <published>2015-01-26T20:21:41.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>So you’ve flashed your Edison and now, when you plug it in, it doesn’t show up as a drive anymore in Windows explorer. At first you might think you broke something but it’s not you, it’s Windows. It actually knows the drive is there and in this video I show you how to get it to show up again in Explorer. For those that like the written word over video, here are the steps.</p>
 <ol>
@@ -178,7 +216,7 @@
     <title><![CDATA[Installing Ubilinux on the Edison]]></title>
     <link href="http://www.microcasts.tv/episodes/2015/01/25/installing-ubilinux-on-the-edison-windows/"/>
     <id>http://www.microcasts.tv/episodes/2015/01/25/installing-ubilinux-on-the-edison-windows/</id>
-    <published>2015-01-25T07:05:41.000Z</published>
+    <published>2015-01-25T08:05:41.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>In this &micro;Cast I’m going to show you how to replace the default Yocto linux image on your Intel Edison with Ubilinux from Emutex Labs. The Yocto linux distro that comes pre-installed on the Intel Edison is a great option for embedded applications because you can customize the distro to fit your end product and off you go. It’s not great, however, for playing around with different things and exploring what your Edison is capable of and can seem a little unfamiliar if you’re used to all the amenities of other embedded linux distros like Raspbian. Building packages from source and installing them is a pain, especially if you’re used to having a package manager. That’s where Ubilinux comes in. It’s based on the Debian “wheezy” distro which, for any Raspberry Pi fans, is the same thing that Raspbian is based on. It comes with C and C++ dev tools, perl, python, node.js and most importantly a package manager so trying new things on the Edison is as easy as apt-get install.</p>
 ]]></content>
@@ -198,7 +236,7 @@
     <title><![CDATA[Clear Core Light Pipe (PRT-10696)]]></title>
     <link href="http://www.microcasts.tv/reviews/2014/12/20/review-Clear-Core-Light-Pipe-PRT-10696/"/>
     <id>http://www.microcasts.tv/reviews/2014/12/20/review-Clear-Core-Light-Pipe-PRT-10696/</id>
-    <published>2014-12-21T05:04:23.000Z</published>
+    <published>2014-12-21T06:04:23.000Z</published>
     <updated>2015-07-01T04:29:12.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Summary">Summary</h2><p>The Clear Core Light Pipe from Sparkfun is basically a length of solid core plastic tubing that transmits light while “bleeding” light along the length. It can be used to “pop out” a status led from inside an enclosure to the exterior by shining the LED in one end and having light emitted from the other end. It’s kind of like fiber optics but has the additional property that light leaks out all along the length kind of like a glow bracelet or necklace but not as bright. While pretty neat stuff for dark applications the glow effect is lacking when lights are on and is basically undetectable in sunlight conditions.</p>
 <h2 id="Price">Price</h2><p>Priced about $5/ft seems a bit high for what is essentially a solid rubber-like cord.</p>
@@ -218,7 +256,7 @@
     <title><![CDATA[5 Stocking Stuffer Ideas For Your #IoT Nerd]]></title>
     <link href="http://www.microcasts.tv/blog/2014/12/03/5-stocking-stuffer-ideas-for-your-number-iot-nerd/"/>
     <id>http://www.microcasts.tv/blog/2014/12/03/5-stocking-stuffer-ideas-for-your-number-iot-nerd/</id>
-    <published>2014-12-04T03:41:00.000Z</published>
+    <published>2014-12-04T04:41:00.000Z</published>
     <updated>2015-07-01T04:25:55.000Z</updated>
     <content type="html"><![CDATA[<p><meta name="twitter:card" content="summary_large_image"></p>
 <p><meta name="twitter:site" content="@KevinSidwar"></p>
@@ -296,7 +334,7 @@
     <title><![CDATA[Edison Mini Breakout: The Real Getting Started Guide]]></title>
     <link href="http://www.microcasts.tv/episodes/2014/10/16/edison-mini-breakout-the-real-getting-started-guide/"/>
     <id>http://www.microcasts.tv/episodes/2014/10/16/edison-mini-breakout-the-real-getting-started-guide/</id>
-    <published>2014-10-16T19:45:00.000Z</published>
+    <published>2014-10-16T20:45:00.000Z</published>
     <updated>2015-07-10T03:41:05.000Z</updated>
     <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="wide_edison_breakout.jpg"></h1>
 
@@ -401,7 +439,7 @@
     <title><![CDATA[Fixing the Bash Bug in Raspbian]]></title>
     <link href="http://www.microcasts.tv/episodes/2014/09/28/fixing-bash-bug-in-raspbian/"/>
     <id>http://www.microcasts.tv/episodes/2014/09/28/fixing-bash-bug-in-raspbian/</id>
-    <published>2014-09-29T04:05:24.000Z</published>
+    <published>2014-09-29T05:05:24.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>How to see if your Pi is vulnerable to Shellshock and how to fix it.</p>
 ]]></content>
@@ -424,7 +462,7 @@
     <title><![CDATA[Cereal Box Pi Cases]]></title>
     <link href="http://www.microcasts.tv/blog/2014/09/24/cereal-box-pi-cases/"/>
     <id>http://www.microcasts.tv/blog/2014/09/24/cereal-box-pi-cases/</id>
-    <published>2014-09-24T15:32:00.000Z</published>
+    <published>2014-09-24T16:32:00.000Z</published>
     <updated>2015-07-01T04:26:04.000Z</updated>
     <content type="html"><![CDATA[<h1 style="text-align:center;"><img src="/img/port/cereal_cases.jpg" width="640" height="360"></h1>
 
@@ -462,7 +500,7 @@
     <title><![CDATA[The Kitchen Appliance Phase of Hardware]]></title>
     <link href="http://www.microcasts.tv/blog/2014/09/16/the-kitchen-appliance-phase-of-hardware/"/>
     <id>http://www.microcasts.tv/blog/2014/09/16/the-kitchen-appliance-phase-of-hardware/</id>
-    <published>2014-09-17T04:55:00.000Z</published>
+    <published>2014-09-17T05:55:00.000Z</published>
     <updated>2015-07-01T04:26:12.000Z</updated>
     <content type="html"><![CDATA[<p>The Internet of Things is all the rage lately. It seems to be all that tech sites want to talk about and therefore what a ton of startups want to work on. I’ve been watching this space closely for the last 5 years and I can’t help but compare hardware, in it’s current iteration, to being just like kitchen gadgets on the Home Shopping Network (link intentionally left off). What do I mean by that? Well, let’s talk about apples for a minute.<br><a id="more"></a></p>
 <img src="/img/port/fuji_money.jpg" class="right">
@@ -496,7 +534,7 @@
     <title><![CDATA[Specs Aren't Everything]]></title>
     <link href="http://www.microcasts.tv/blog/2014/09/15/specs-arent-everything/"/>
     <id>http://www.microcasts.tv/blog/2014/09/15/specs-arent-everything/</id>
-    <published>2014-09-15T21:18:00.000Z</published>
+    <published>2014-09-15T22:18:00.000Z</published>
     <updated>2015-07-01T04:26:19.000Z</updated>
     <content type="html"><![CDATA[<p>In the last week I’ve seen several articles pop up comparing the new Intel Edison to the Raspberry Pi to the Arduino to the [enter some other development platform here]. The problem with every single one of these is that they are missing the boat when it comes to choosing a development platform for your next project.</p>
 <h2 id="Specs_Don’t_Matter…(Mostly)">Specs Don’t Matter…(Mostly)</h2><p>The easy thing to do when you want to create a new piece of tech content is just compare the specs of the different platforms. This table was part of a recent ReadWrite article.</p>
@@ -524,7 +562,7 @@
     <title><![CDATA[Configure the Serial Port on the Raspberry Pi]]></title>
     <link href="http://www.microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/"/>
     <id>http://www.microcasts.tv/episodes/2014/08/08/configure-the-serial-port-on-the-raspberry-pi/</id>
-    <published>2014-08-09T04:08:00.000Z</published>
+    <published>2014-08-09T05:08:00.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>Did you even know the Raspberry Pi had a serial port? If you did and have tried to use it in Raspbian you’ve probably run in to some weird behavior. That’s because, by default, the serial port is tied up by the operating system so it can’t be reliably used in your projects. In this episode I show you how to configure the serial port so it can be used to make your awesome ideas reality.</p>
 <h2 id="TL;DR">TL;DR</h2><p>All you have to do is modify two files to reclaim the serial port from Raspbian. The rest of this post shows you how.</p>
@@ -551,7 +589,7 @@
     <title><![CDATA[A Physical Yo Button]]></title>
     <link href="http://www.microcasts.tv/blog/2014/06/25/a-physical-yo-button/"/>
     <id>http://www.microcasts.tv/blog/2014/06/25/a-physical-yo-button/</id>
-    <published>2014-06-25T21:03:00.000Z</published>
+    <published>2014-06-25T22:03:00.000Z</published>
     <updated>2015-07-08T04:47:04.000Z</updated>
     <content type="html"><![CDATA[<p>I think we’re all still trying to figure out what Yo’s place is in the internet family but as of right now it’s basically a viral app. As soon as I found out there was an API for it I just knew I had to attach some hardware to it. Here’s a demo of what I put together.</p>
 <p>The whole thing took me about 4 hours once I resolved my API issue (I originally gave them the wrong URL for the callback and had to email them to fix it). I want to share the process in case other people want to integrate Yo with hardware.</p>
@@ -610,7 +648,7 @@
     <title><![CDATA[Control Hardware Remotely With Socket.IO]]></title>
     <link href="http://www.microcasts.tv/episodes/2014/06/21/using-socket-io-to-control-the-raspberry-pi-remotely/"/>
     <id>http://www.microcasts.tv/episodes/2014/06/21/using-socket-io-to-control-the-raspberry-pi-remotely/</id>
-    <published>2014-06-21T06:13:00.000Z</published>
+    <published>2014-06-21T07:13:00.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p>If you’ve been paying attention to hardware lately you’ve probably noticed how people have gone insane over remotely accessing their devices. In this &micro;Cast I’ll show you a simple way to get your project setup so that you can talk to it and control it via the interwebs. The best part, it only takes about 20 minutes.</p>
 <p>We’ll pull together all kinds of awesomeness using</p>
@@ -646,7 +684,7 @@
     <title><![CDATA[Openwest 2014 Presentation]]></title>
     <link href="http://www.microcasts.tv/blog/2014/06/02/openwest-2014-presentation/"/>
     <id>http://www.microcasts.tv/blog/2014/06/02/openwest-2014-presentation/</id>
-    <published>2014-06-03T05:06:00.000Z</published>
+    <published>2014-06-03T06:06:00.000Z</published>
     <updated>2015-07-01T04:26:57.000Z</updated>
     <content type="html"><![CDATA[<p>My presentation from the Openwest Conference has posted to YouTube.</p>
 <div class="videoblob"><br><iframe width="560" height="315" src="//www.youtube.com/embed/fSqFgc-U_ZI" frameborder="0" allowfullscreen></iframe><br></div>
@@ -670,7 +708,7 @@
     <title><![CDATA[Raspberry Pi Python Library]]></title>
     <link href="http://www.microcasts.tv/blog/2014/05/16/raspberry-pi-python-library/"/>
     <id>http://www.microcasts.tv/blog/2014/05/16/raspberry-pi-python-library/</id>
-    <published>2014-05-16T06:15:00.000Z</published>
+    <published>2014-05-16T07:15:00.000Z</published>
     <updated>2015-07-01T04:27:03.000Z</updated>
     <content type="html"><![CDATA[<h3 id="TLDR">TLDR</h3><p>I created a python module that makes interacting with specific hardware easy. You can find it here:<br><a href="https://github.com/sidwarkd/ucasts_pi" target="_blank" rel="external">&micro;Casts Raspberry Pi Library</a></p>
 <hr>
@@ -713,7 +751,7 @@
     <title><![CDATA[Pi + Express + Bootstrap + Angular FTW!]]></title>
     <link href="http://www.microcasts.tv/episodes/2014/04/14/pi-express-bootstrap-angular-ftw/"/>
     <id>http://www.microcasts.tv/episodes/2014/04/14/pi-express-bootstrap-angular-ftw/</id>
-    <published>2014-04-15T05:19:00.000Z</published>
+    <published>2014-04-15T06:19:00.000Z</published>
     <updated>2015-06-27T03:12:18.000Z</updated>
     <content type="html"><![CDATA[<p><strong>[UPDATE]:</strong> I’ve had requests to post the finished code on Github for those that want to just play with the completed app. It’s now available at <a href="https://github.com/sidwarkd/pimonitor" target="_blank" rel="external">https://github.com/sidwarkd/pimonitor</a>.</p>
 <p>About a month ago I came across the <a href="http://lifehacker.com/command-pi-monitors-your-raspberry-pi-from-your-phone-1561340630" target="_blank" rel="external">CommandPi</a> iOS app. It looked interesting so I paid the 99 cents and downloaded it to my iPad. The problem was, it didn’t work. I would provide my SSH credentials and after logging in the program would crash. So like any curious developer, instead of waiting for a fix I set out to write my own.</p>
@@ -740,7 +778,7 @@
     <title><![CDATA[Raspberry Pi Hacking Cheat Sheet]]></title>
     <link href="http://www.microcasts.tv/blog/2014/04/02/raspberry-pi-hacking-cheat-sheet/"/>
     <id>http://www.microcasts.tv/blog/2014/04/02/raspberry-pi-hacking-cheat-sheet/</id>
-    <published>2014-04-03T05:29:00.000Z</published>
+    <published>2014-04-03T06:29:00.000Z</published>
     <updated>2015-07-01T04:27:10.000Z</updated>
     <content type="html"><![CDATA[<h1 style="text-align:center"><a href="/img/port/Unleash_The_Pi_Cheat_Sheet_v1.pdf"><img src="/img/port/cheat_sheet_img.jpg" alt="Cheat Sheet Image"></a></h1>
 
@@ -755,26 +793,6 @@
       <category term="RaspberryPi" scheme="http://www.microcasts.tv/tags/RaspberryPi/"/>
     
       <category term="blog" scheme="http://www.microcasts.tv/categories/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CPU Usage on the Raspberry Pi]]></title>
-    <link href="http://www.microcasts.tv/episodes/2014/03/20/cpu-usage-on-the-raspberry-pi/"/>
-    <id>http://www.microcasts.tv/episodes/2014/03/20/cpu-usage-on-the-raspberry-pi/</id>
-    <published>2014-03-21T04:41:00.000Z</published>
-    <updated>2015-06-27T03:12:18.000Z</updated>
-    <content type="html"><![CDATA[<p>In this µCast we cover the very basics of CPU usage on the Raspberry Pi and show you how to figure out how hard your ARM processor is working in realtime.</p>
-<h2 id="Sample_Code">Sample Code</h2><p>The following chunks of code contain the memory examples from µCast #14 as well as the CPU usage code in Python or NodeJS. <strong>This code is not production ready as it does little to no error checking.</strong></p>
-<h3 id="NodeJS_Sample">NodeJS Sample</h3><script src="//gist.github.com/sidwarkd/9578213.js?file=pi_stats.js"></script> 
-<h3 id="Python_Sample">Python Sample</h3><script src="//gist.github.com/sidwarkd/9578213.js?file=pi_stats.py"></script> ]]></content>
-    <summary type="html">
-    <![CDATA[<p>In this µCast we cover the very basics of CPU usage on the Raspberry Pi and show you how to figure out how hard your ARM processor is wor]]>
-    </summary>
-    
-      <category term="RaspberryPi" scheme="http://www.microcasts.tv/tags/RaspberryPi/"/>
-    
-      <category term="episodes" scheme="http://www.microcasts.tv/categories/episodes/"/>
     
   </entry>
   
