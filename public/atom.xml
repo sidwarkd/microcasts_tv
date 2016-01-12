@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.microcasts.tv//"/>
-  <updated>2016-01-03T08:58:46.000Z</updated>
+  <updated>2016-01-12T08:04:17.000Z</updated>
   <id>http://www.microcasts.tv//</id>
   
   <author>
@@ -16,14 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[5 Things To Know About The Onion Omega]]></title>
-    <link href="http://www.microcasts.tv/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/"/>
-    <id>http://www.microcasts.tv/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/</id>
+    <title><![CDATA[6 Things To Know About The Onion Omega]]></title>
+    <link href="http://www.microcasts.tv/blog/2016/01/03/6-Things-To-Know-About-The-Onion-Omega/"/>
+    <id>http://www.microcasts.tv/blog/2016/01/03/6-Things-To-Know-About-The-Onion-Omega/</id>
     <published>2016-01-03T08:31:12.000Z</published>
-    <updated>2016-01-03T08:58:46.000Z</updated>
-    <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints"></h1>
+    <updated>2016-01-12T08:04:17.000Z</updated>
+    <content type="html"><![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/6-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints"></h1>
 
-<p>The <a href="https://onion.io/omega" target="_blank" rel="external">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>
+<p>The <a href="https://onion.io/omega" target="_blank" rel="external">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 6 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>
 <a id="more"></a>
 <h2 id="1-_It’s_OpenWrt_Under_the_Hood">1. It’s OpenWrt Under the Hood</h2><p>This isn’t a magical secret but it can definitely be helpful if you’re trying to figure out how to do something not covered in the documentation. The docs on the Omega are still very scarce so if you’re trying to do something beyond getting started you probably won’t find it there. The docs and info on <a href="https://openwrt.org/" target="_blank" rel="external">OpenWrt</a> are aplenty so you’re much more likely to find help if you seek it out in those forums. Google is your friend on this one.</p>
 <h2 id="2-_The_Pins_Aren’t_-1”_Spaced">2. The Pins Aren’t .1” Spaced</h2><p>Again, not something that’s hidden but it’s also not super apparent if you are shopping on the website especially if you are a beginner. It’s important to know because that means you can’t just connect it to a breadboard and start prototyping with it. You will definitely need one of the available docks from their website. I recommend the Expansion Dock to get started.</p>
@@ -32,14 +32,15 @@
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
 <h2 id="4-_You_Can_Rename_It">4. You Can Rename It</h2><p>When you first set up the Omega it’ll have a name like OMEGA-1ACD which means to access it via the browser after setting it up you’ll use something like <a href="http://omega-1acd.local/" target="_blank" rel="external">http://omega-1acd.local/</a> which is fine but can be hard to remember. Just rename it by going into the <em>General Settings</em> tab in the <strong>Settings</strong> app.</p>
-<h2 id="5-_It_Isn’t_All_There…-Yet">5. It Isn’t All There….Yet</h2><p>I personally bought the Omega because it promised NodeJS support but quickly found out that it’s still not there. There are some posts in the forums where people have gotten NodeJS to run but it’s a very old version and there is no available documentation on how you’d use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. </p>
+<h2 id="5-_It’s_Wide_Open_By_Default">5. It’s Wide Open By Default</h2><p>Out of the box the Omega is configured to act as an access point so that you can connect directly to it. This solves the classic chicken and egg problem with IoT devices. You need to give the device info to connect to your network but until it’s connected to your network you can’t connect to it without a hard connection. Access point mode solves this by allowing you to connect directly to the Omega and from there you can give it credentials to connect to your local network. However, if you don’t close the door behind you, you’ll end up with an Omega that can connect directly to your home network but still has wide open access via the access point mode. In the Settings app you can change the SSID and add credentials to the AP mode to solve this problem. I’d also recommend changing the default password.</p>
+<h2 id="6-_It_Isn’t_All_There…-Yet">6. It Isn’t All There….Yet</h2><p>I personally bought the Omega because it promised NodeJS support but quickly found out that it’s still not there. There are some posts in the forums where people have gotten NodeJS to run but it’s a very old version and there is no available documentation on how you’d use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. </p>
 <p>From what I’ve seen so far I have no reason to suspect that the team won’t deliver on its promises and they are very active in the community forums. Just know that it’s not quite everything it’s billed to be on the marketing pages yet but appears to be getting there fast.</p>
 <h2 id="Questions">Questions</h2><p>Have any questions about the Omega? I’d love to try to answer them for you and am feverishly trying to put together some µCasts to help you get started with it. Ask below in the comments and I’ll see if I can dig up the answer for you.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/5-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints" /></h1>
+    <![CDATA[<h1 style="text-align:center;"><img class="img-responsive" src="/blog/2016/01/03/6-Things-To-Know-About-The-Onion-Omega/omega_docked_silkscreened.png" alt="Omega with extra silkscreen hints" /></h1>
 
-<p>The <a href="https://onion.io/omega">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>]]>
+<p>The <a href="https://onion.io/omega">Onion Omega</a> is billed as “an invention platform for the Internet of Things.” It’s a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 6 things I think you should know if you’re just get started with yours or thinking about ordering one.</p>]]>
     
     </summary>
     

@@ -1,5 +1,5 @@
 type: blog
-title: 5 Things To Know About The Onion Omega
+title: 6 Things To Know About The Onion Omega
 comments: true
 categories: blog
 tags: [Onion Omega, OpenWrt, Platform]
@@ -8,7 +8,7 @@ date: 2016-01-03 00:31:12
 
 <h1 style="text-align:center;"><img class="img-responsive" src="{%asset_path omega_docked_silkscreened.png %}" alt="Omega with extra silkscreen hints" /></h1>
 
-The [Onion Omega](https://onion.io/omega) is billed as "an invention platform for the Internet of Things." It's a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 5 things I think you should know if you're just get started with yours or thinking about ordering one.
+The [Onion Omega](https://onion.io/omega) is billed as "an invention platform for the Internet of Things." It's a compact module that has WiFi built in and promises to allow hardware prototyping in high level languages like Python and Javascript with NodeJS. After playing with one for several hours here are the 6 things I think you should know if you're just get started with yours or thinking about ordering one.
 
 <!-- more -->
 
@@ -27,7 +27,10 @@ There are multiple power options when working with the Omega but there are some 
 ## 4. You Can Rename It
 When you first set up the Omega it'll have a name like OMEGA-1ACD which means to access it via the browser after setting it up you'll use something like http://omega-1acd.local/ which is fine but can be hard to remember. Just rename it by going into the *General Settings* tab in the **Settings** app.
 
-## 5. It Isn't All There....Yet
+## 5. It's Wide Open By Default
+Out of the box the Omega is configured to act as an access point so that you can connect directly to it. This solves the classic chicken and egg problem with IoT devices. You need to give the device info to connect to your network but until it's connected to your network you can't connect to it without a hard connection. Access point mode solves this by allowing you to connect directly to the Omega and from there you can give it credentials to connect to your local network. However, if you don't close the door behind you, you'll end up with an Omega that can connect directly to your home network but still has wide open access via the access point mode. In the Settings app you can change the SSID and add credentials to the AP mode to solve this problem. I'd also recommend changing the default password.
+
+## 6. It Isn't All There....Yet
 I personally bought the Omega because it promised NodeJS support but quickly found out that it's still not there. There are some posts in the forums where people have gotten NodeJS to run but it's a very old version and there is no available documentation on how you'd use it to interact with hardware even if you did manage to get it setup. That said, the team is working like crazy with new hardware updates coming pretty much weekly. Filming a getting started tutorial has proved difficult because new things are being added so quickly. 
 
 From what I've seen so far I have no reason to suspect that the team won't deliver on its promises and they are very active in the community forums. Just know that it's not quite everything it's billed to be on the marketing pages yet but appears to be getting there fast.
